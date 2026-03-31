@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LitAudio – Web MVP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="badge">MVP Prototype</p>
+        <h1>LitAudio Bibliothek</h1>
+        <p class="subline">Klassiker hören. Kontext verstehen. Besser lernen.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Filter und Suche">
+        <div class="control-group">
+          <label for="searchInput">Suche</label>
+          <input id="searchInput" type="search" placeholder="Titel oder Autor" />
+        </div>
+
+        <div class="control-group">
+          <label for="periodSelect">Epoche</label>
+          <select id="periodSelect">
+            <option value="">Alle</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="authorSelect">Autor</label>
+          <select id="authorSelect">
+            <option value="">Alle</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="gradeSelect">Klassenstufe</label>
+          <select id="gradeSelect">
+            <option value="">Alle</option>
+            <option value="9">ab Klasse 9</option>
+            <option value="10">ab Klasse 10</option>
+            <option value="11">ab Klasse 11</option>
+            <option value="12">ab Klasse 12</option>
+            <option value="13">ab Klasse 13</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="summary-row">
+        <p id="resultSummary">Lade Bibliothek…</p>
+      </section>
+
+      <section>
+        <ul id="workList" class="work-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <template id="workCardTemplate">
+      <li class="work-card">
+        <h2 class="work-title"></h2>
+        <p class="meta"></p>
+        <p class="synopsis"></p>
+        <dl class="details"></dl>
+      </li>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
