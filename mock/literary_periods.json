@@ -1,0 +1,50 @@
+[
+  {
+    "id": "period_aufklaerung_empfindsamkeit",
+    "name": "Aufklärung & Empfindsamkeit",
+    "start_year": 1720,
+    "end_year": 1790
+  },
+  {
+    "id": "period_sturm_und_drang_klassik",
+    "name": "Sturm und Drang & Weimarer Klassik",
+    "start_year": 1765,
+    "end_year": 1832
+  },
+  {
+    "id": "period_romantik",
+    "name": "Romantik",
+    "start_year": 1795,
+    "end_year": 1848
+  },
+  {
+    "id": "period_zwischen_klassik_romantik",
+    "name": "Zwischen Klassik & Romantik",
+    "start_year": 1790,
+    "end_year": 1830
+  },
+  {
+    "id": "period_vormaerz_biedermeier",
+    "name": "Vormärz & Biedermeier",
+    "start_year": 1815,
+    "end_year": 1848
+  },
+  {
+    "id": "period_buergerlicher_realismus",
+    "name": "Bürgerlicher Realismus",
+    "start_year": 1848,
+    "end_year": 1890
+  },
+  {
+    "id": "period_naturalismus_jahrhundertwende",
+    "name": "Naturalismus & Jahrhundertwende",
+    "start_year": 1880,
+    "end_year": 1910
+  },
+  {
+    "id": "period_moderne_expressionismus_exil",
+    "name": "Moderne, Expressionismus & Exilliteratur",
+    "start_year": 1900,
+    "end_year": 1945
+  }
+]

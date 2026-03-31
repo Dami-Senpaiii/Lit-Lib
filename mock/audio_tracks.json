@@ -1,0 +1,1784 @@
+[
+  {
+    "id": "at_work_lessing_nathan_der_weise_01",
+    "edition_id": "ae_work_lessing_nathan_der_weise",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_nathan_der_weise/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_nathan_der_weise_02",
+    "edition_id": "ae_work_lessing_nathan_der_weise",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_nathan_der_weise/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_nathan_der_weise_03",
+    "edition_id": "ae_work_lessing_nathan_der_weise",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_nathan_der_weise/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_emilia_galotti_01",
+    "edition_id": "ae_work_lessing_emilia_galotti",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_emilia_galotti/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_emilia_galotti_02",
+    "edition_id": "ae_work_lessing_emilia_galotti",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_emilia_galotti/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_emilia_galotti_03",
+    "edition_id": "ae_work_lessing_emilia_galotti",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_emilia_galotti/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_minna_von_barnhelm_01",
+    "edition_id": "ae_work_lessing_minna_von_barnhelm",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_minna_von_barnhelm/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_minna_von_barnhelm_02",
+    "edition_id": "ae_work_lessing_minna_von_barnhelm",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_minna_von_barnhelm/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lessing_minna_von_barnhelm_03",
+    "edition_id": "ae_work_lessing_minna_von_barnhelm",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lessing_minna_von_barnhelm/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_faust_der_tragoedie_erster_teil_faust_i_01",
+    "edition_id": "ae_work_goethe_faust_der_tragoedie_erster_teil_faust_i",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_faust_der_tragoedie_erster_teil_faust_i/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_faust_der_tragoedie_erster_teil_faust_i_02",
+    "edition_id": "ae_work_goethe_faust_der_tragoedie_erster_teil_faust_i",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_faust_der_tragoedie_erster_teil_faust_i/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_faust_der_tragoedie_erster_teil_faust_i_03",
+    "edition_id": "ae_work_goethe_faust_der_tragoedie_erster_teil_faust_i",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_faust_der_tragoedie_erster_teil_faust_i/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_die_leiden_des_jungen_werthers_01",
+    "edition_id": "ae_work_goethe_die_leiden_des_jungen_werthers",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_die_leiden_des_jungen_werthers/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_die_leiden_des_jungen_werthers_02",
+    "edition_id": "ae_work_goethe_die_leiden_des_jungen_werthers",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_die_leiden_des_jungen_werthers/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_die_leiden_des_jungen_werthers_03",
+    "edition_id": "ae_work_goethe_die_leiden_des_jungen_werthers",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_die_leiden_des_jungen_werthers/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_iphigenie_auf_tauris_01",
+    "edition_id": "ae_work_goethe_iphigenie_auf_tauris",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_iphigenie_auf_tauris/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_iphigenie_auf_tauris_02",
+    "edition_id": "ae_work_goethe_iphigenie_auf_tauris",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_iphigenie_auf_tauris/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_iphigenie_auf_tauris_03",
+    "edition_id": "ae_work_goethe_iphigenie_auf_tauris",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_iphigenie_auf_tauris/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_goetz_von_berlichingen_01",
+    "edition_id": "ae_work_goethe_goetz_von_berlichingen",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_goetz_von_berlichingen/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_goetz_von_berlichingen_02",
+    "edition_id": "ae_work_goethe_goetz_von_berlichingen",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_goetz_von_berlichingen/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_goethe_goetz_von_berlichingen_03",
+    "edition_id": "ae_work_goethe_goetz_von_berlichingen",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_goethe_goetz_von_berlichingen/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_die_raeuber_01",
+    "edition_id": "ae_work_schiller_die_raeuber",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_die_raeuber/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_die_raeuber_02",
+    "edition_id": "ae_work_schiller_die_raeuber",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_die_raeuber/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_die_raeuber_03",
+    "edition_id": "ae_work_schiller_die_raeuber",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_die_raeuber/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_kabale_und_liebe_01",
+    "edition_id": "ae_work_schiller_kabale_und_liebe",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_kabale_und_liebe/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_kabale_und_liebe_02",
+    "edition_id": "ae_work_schiller_kabale_und_liebe",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_kabale_und_liebe/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_kabale_und_liebe_03",
+    "edition_id": "ae_work_schiller_kabale_und_liebe",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_kabale_und_liebe/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_maria_stuart_01",
+    "edition_id": "ae_work_schiller_maria_stuart",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_maria_stuart/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_maria_stuart_02",
+    "edition_id": "ae_work_schiller_maria_stuart",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_maria_stuart/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_maria_stuart_03",
+    "edition_id": "ae_work_schiller_maria_stuart",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_maria_stuart/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_wilhelm_tell_01",
+    "edition_id": "ae_work_schiller_wilhelm_tell",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_wilhelm_tell/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_wilhelm_tell_02",
+    "edition_id": "ae_work_schiller_wilhelm_tell",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_wilhelm_tell/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_wilhelm_tell_03",
+    "edition_id": "ae_work_schiller_wilhelm_tell",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_wilhelm_tell/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_don_karlos_01",
+    "edition_id": "ae_work_schiller_don_karlos",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_don_karlos/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_don_karlos_02",
+    "edition_id": "ae_work_schiller_don_karlos",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_don_karlos/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schiller_don_karlos_03",
+    "edition_id": "ae_work_schiller_don_karlos",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schiller_don_karlos/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_der_sandmann_01",
+    "edition_id": "ae_work_hoffmann_der_sandmann",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_der_sandmann/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_der_sandmann_02",
+    "edition_id": "ae_work_hoffmann_der_sandmann",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_der_sandmann/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_der_sandmann_03",
+    "edition_id": "ae_work_hoffmann_der_sandmann",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_der_sandmann/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_der_goldne_topf_01",
+    "edition_id": "ae_work_hoffmann_der_goldne_topf",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_der_goldne_topf/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_der_goldne_topf_02",
+    "edition_id": "ae_work_hoffmann_der_goldne_topf",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_der_goldne_topf/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_der_goldne_topf_03",
+    "edition_id": "ae_work_hoffmann_der_goldne_topf",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_der_goldne_topf/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_das_fraeulein_von_scuderi_01",
+    "edition_id": "ae_work_hoffmann_das_fraeulein_von_scuderi",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_das_fraeulein_von_scuderi/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_das_fraeulein_von_scuderi_02",
+    "edition_id": "ae_work_hoffmann_das_fraeulein_von_scuderi",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_das_fraeulein_von_scuderi/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hoffmann_das_fraeulein_von_scuderi_03",
+    "edition_id": "ae_work_hoffmann_das_fraeulein_von_scuderi",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hoffmann_das_fraeulein_von_scuderi/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_eichendorff_aus_dem_leben_eines_taugenichts_01",
+    "edition_id": "ae_work_eichendorff_aus_dem_leben_eines_taugenichts",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_eichendorff_aus_dem_leben_eines_taugenichts/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_eichendorff_aus_dem_leben_eines_taugenichts_02",
+    "edition_id": "ae_work_eichendorff_aus_dem_leben_eines_taugenichts",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_eichendorff_aus_dem_leben_eines_taugenichts/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_eichendorff_aus_dem_leben_eines_taugenichts_03",
+    "edition_id": "ae_work_eichendorff_aus_dem_leben_eines_taugenichts",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_eichendorff_aus_dem_leben_eines_taugenichts/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_eichendorff_das_marmorbild_01",
+    "edition_id": "ae_work_eichendorff_das_marmorbild",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_eichendorff_das_marmorbild/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_eichendorff_das_marmorbild_02",
+    "edition_id": "ae_work_eichendorff_das_marmorbild",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_eichendorff_das_marmorbild/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_eichendorff_das_marmorbild_03",
+    "edition_id": "ae_work_eichendorff_das_marmorbild",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_eichendorff_das_marmorbild/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_novalis_heinrich_von_ofterdingen_01",
+    "edition_id": "ae_work_novalis_heinrich_von_ofterdingen",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_novalis_heinrich_von_ofterdingen/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_novalis_heinrich_von_ofterdingen_02",
+    "edition_id": "ae_work_novalis_heinrich_von_ofterdingen",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_novalis_heinrich_von_ofterdingen/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_novalis_heinrich_von_ofterdingen_03",
+    "edition_id": "ae_work_novalis_heinrich_von_ofterdingen",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_novalis_heinrich_von_ofterdingen/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_der_zerbrochne_krug_01",
+    "edition_id": "ae_work_kleist_der_zerbrochne_krug",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_der_zerbrochne_krug/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_der_zerbrochne_krug_02",
+    "edition_id": "ae_work_kleist_der_zerbrochne_krug",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_der_zerbrochne_krug/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_der_zerbrochne_krug_03",
+    "edition_id": "ae_work_kleist_der_zerbrochne_krug",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_der_zerbrochne_krug/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_die_marquise_von_o_01",
+    "edition_id": "ae_work_kleist_die_marquise_von_o",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_die_marquise_von_o/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_die_marquise_von_o_02",
+    "edition_id": "ae_work_kleist_die_marquise_von_o",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_die_marquise_von_o/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_die_marquise_von_o_03",
+    "edition_id": "ae_work_kleist_die_marquise_von_o",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_die_marquise_von_o/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_das_erdbeben_in_chili_01",
+    "edition_id": "ae_work_kleist_das_erdbeben_in_chili",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_das_erdbeben_in_chili/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_das_erdbeben_in_chili_02",
+    "edition_id": "ae_work_kleist_das_erdbeben_in_chili",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_das_erdbeben_in_chili/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_das_erdbeben_in_chili_03",
+    "edition_id": "ae_work_kleist_das_erdbeben_in_chili",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_das_erdbeben_in_chili/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_prinz_friedrich_von_homburg_01",
+    "edition_id": "ae_work_kleist_prinz_friedrich_von_homburg",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_prinz_friedrich_von_homburg/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_prinz_friedrich_von_homburg_02",
+    "edition_id": "ae_work_kleist_prinz_friedrich_von_homburg",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_prinz_friedrich_von_homburg/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kleist_prinz_friedrich_von_homburg_03",
+    "edition_id": "ae_work_kleist_prinz_friedrich_von_homburg",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kleist_prinz_friedrich_von_homburg/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_woyzeck_01",
+    "edition_id": "ae_work_buechner_woyzeck",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_woyzeck/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_woyzeck_02",
+    "edition_id": "ae_work_buechner_woyzeck",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_woyzeck/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_woyzeck_03",
+    "edition_id": "ae_work_buechner_woyzeck",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_woyzeck/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_dantons_tod_01",
+    "edition_id": "ae_work_buechner_dantons_tod",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_dantons_tod/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_dantons_tod_02",
+    "edition_id": "ae_work_buechner_dantons_tod",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_dantons_tod/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_dantons_tod_03",
+    "edition_id": "ae_work_buechner_dantons_tod",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_dantons_tod/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_lenz_01",
+    "edition_id": "ae_work_buechner_lenz",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_lenz/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_lenz_02",
+    "edition_id": "ae_work_buechner_lenz",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_lenz/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_lenz_03",
+    "edition_id": "ae_work_buechner_lenz",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_lenz/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_leonce_und_lena_01",
+    "edition_id": "ae_work_buechner_leonce_und_lena",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_leonce_und_lena/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_leonce_und_lena_02",
+    "edition_id": "ae_work_buechner_leonce_und_lena",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_leonce_und_lena/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_buechner_leonce_und_lena_03",
+    "edition_id": "ae_work_buechner_leonce_und_lena",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_buechner_leonce_und_lena/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heine_deutschland_ein_wintermaerchen_01",
+    "edition_id": "ae_work_heine_deutschland_ein_wintermaerchen",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heine_deutschland_ein_wintermaerchen/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heine_deutschland_ein_wintermaerchen_02",
+    "edition_id": "ae_work_heine_deutschland_ein_wintermaerchen",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heine_deutschland_ein_wintermaerchen/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heine_deutschland_ein_wintermaerchen_03",
+    "edition_id": "ae_work_heine_deutschland_ein_wintermaerchen",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heine_deutschland_ein_wintermaerchen/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heine_buch_der_lieder_01",
+    "edition_id": "ae_work_heine_buch_der_lieder",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heine_buch_der_lieder/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heine_buch_der_lieder_02",
+    "edition_id": "ae_work_heine_buch_der_lieder",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heine_buch_der_lieder/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heine_buch_der_lieder_03",
+    "edition_id": "ae_work_heine_buch_der_lieder",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heine_buch_der_lieder/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_droste_die_judenbuche_01",
+    "edition_id": "ae_work_droste_die_judenbuche",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_droste_die_judenbuche/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_droste_die_judenbuche_02",
+    "edition_id": "ae_work_droste_die_judenbuche",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_droste_die_judenbuche/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_droste_die_judenbuche_03",
+    "edition_id": "ae_work_droste_die_judenbuche",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_droste_die_judenbuche/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_moerike_mozart_auf_der_reise_nach_prag_01",
+    "edition_id": "ae_work_moerike_mozart_auf_der_reise_nach_prag",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_moerike_mozart_auf_der_reise_nach_prag/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_moerike_mozart_auf_der_reise_nach_prag_02",
+    "edition_id": "ae_work_moerike_mozart_auf_der_reise_nach_prag",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_moerike_mozart_auf_der_reise_nach_prag/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_moerike_mozart_auf_der_reise_nach_prag_03",
+    "edition_id": "ae_work_moerike_mozart_auf_der_reise_nach_prag",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_moerike_mozart_auf_der_reise_nach_prag/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_effi_briest_01",
+    "edition_id": "ae_work_fontane_effi_briest",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_effi_briest/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_effi_briest_02",
+    "edition_id": "ae_work_fontane_effi_briest",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_effi_briest/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_effi_briest_03",
+    "edition_id": "ae_work_fontane_effi_briest",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_effi_briest/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_irrungen_wirrungen_01",
+    "edition_id": "ae_work_fontane_irrungen_wirrungen",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_irrungen_wirrungen/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_irrungen_wirrungen_02",
+    "edition_id": "ae_work_fontane_irrungen_wirrungen",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_irrungen_wirrungen/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_irrungen_wirrungen_03",
+    "edition_id": "ae_work_fontane_irrungen_wirrungen",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_irrungen_wirrungen/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_der_stechlin_01",
+    "edition_id": "ae_work_fontane_der_stechlin",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_der_stechlin/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_der_stechlin_02",
+    "edition_id": "ae_work_fontane_der_stechlin",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_der_stechlin/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_fontane_der_stechlin_03",
+    "edition_id": "ae_work_fontane_der_stechlin",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_fontane_der_stechlin/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_keller_kleider_machen_leute_01",
+    "edition_id": "ae_work_keller_kleider_machen_leute",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_keller_kleider_machen_leute/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_keller_kleider_machen_leute_02",
+    "edition_id": "ae_work_keller_kleider_machen_leute",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_keller_kleider_machen_leute/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_keller_kleider_machen_leute_03",
+    "edition_id": "ae_work_keller_kleider_machen_leute",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_keller_kleider_machen_leute/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_keller_romeo_und_julia_auf_dem_dorfe_01",
+    "edition_id": "ae_work_keller_romeo_und_julia_auf_dem_dorfe",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_keller_romeo_und_julia_auf_dem_dorfe/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_keller_romeo_und_julia_auf_dem_dorfe_02",
+    "edition_id": "ae_work_keller_romeo_und_julia_auf_dem_dorfe",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_keller_romeo_und_julia_auf_dem_dorfe/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_keller_romeo_und_julia_auf_dem_dorfe_03",
+    "edition_id": "ae_work_keller_romeo_und_julia_auf_dem_dorfe",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_keller_romeo_und_julia_auf_dem_dorfe/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_storm_der_schimmelreiter_01",
+    "edition_id": "ae_work_storm_der_schimmelreiter",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_storm_der_schimmelreiter/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_storm_der_schimmelreiter_02",
+    "edition_id": "ae_work_storm_der_schimmelreiter",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_storm_der_schimmelreiter/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_storm_der_schimmelreiter_03",
+    "edition_id": "ae_work_storm_der_schimmelreiter",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_storm_der_schimmelreiter/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_storm_pole_poppenspaeler_01",
+    "edition_id": "ae_work_storm_pole_poppenspaeler",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_storm_pole_poppenspaeler/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_storm_pole_poppenspaeler_02",
+    "edition_id": "ae_work_storm_pole_poppenspaeler",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_storm_pole_poppenspaeler/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_storm_pole_poppenspaeler_03",
+    "edition_id": "ae_work_storm_pole_poppenspaeler",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_storm_pole_poppenspaeler/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_gotthelf_die_schwarze_spinne_01",
+    "edition_id": "ae_work_gotthelf_die_schwarze_spinne",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_gotthelf_die_schwarze_spinne/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_gotthelf_die_schwarze_spinne_02",
+    "edition_id": "ae_work_gotthelf_die_schwarze_spinne",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_gotthelf_die_schwarze_spinne/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_gotthelf_die_schwarze_spinne_03",
+    "edition_id": "ae_work_gotthelf_die_schwarze_spinne",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_gotthelf_die_schwarze_spinne/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_ebner_krambambuli_01",
+    "edition_id": "ae_work_ebner_krambambuli",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_ebner_krambambuli/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_ebner_krambambuli_02",
+    "edition_id": "ae_work_ebner_krambambuli",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_ebner_krambambuli/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_ebner_krambambuli_03",
+    "edition_id": "ae_work_ebner_krambambuli",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_ebner_krambambuli/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_ebner_das_gemeindekind_01",
+    "edition_id": "ae_work_ebner_das_gemeindekind",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_ebner_das_gemeindekind/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_ebner_das_gemeindekind_02",
+    "edition_id": "ae_work_ebner_das_gemeindekind",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_ebner_das_gemeindekind/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_ebner_das_gemeindekind_03",
+    "edition_id": "ae_work_ebner_das_gemeindekind",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_ebner_das_gemeindekind/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_die_weber_01",
+    "edition_id": "ae_work_hauptmann_die_weber",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_die_weber/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_die_weber_02",
+    "edition_id": "ae_work_hauptmann_die_weber",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_die_weber/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_die_weber_03",
+    "edition_id": "ae_work_hauptmann_die_weber",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_die_weber/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_bahnwaerter_thiel_01",
+    "edition_id": "ae_work_hauptmann_bahnwaerter_thiel",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_bahnwaerter_thiel/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_bahnwaerter_thiel_02",
+    "edition_id": "ae_work_hauptmann_bahnwaerter_thiel",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_bahnwaerter_thiel/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_bahnwaerter_thiel_03",
+    "edition_id": "ae_work_hauptmann_bahnwaerter_thiel",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_bahnwaerter_thiel/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_die_ratten_01",
+    "edition_id": "ae_work_hauptmann_die_ratten",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_die_ratten/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_die_ratten_02",
+    "edition_id": "ae_work_hauptmann_die_ratten",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_die_ratten/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_hauptmann_die_ratten_03",
+    "edition_id": "ae_work_hauptmann_die_ratten",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_hauptmann_die_ratten/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_traumnovelle_01",
+    "edition_id": "ae_work_schnitzler_traumnovelle",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_traumnovelle/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_traumnovelle_02",
+    "edition_id": "ae_work_schnitzler_traumnovelle",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_traumnovelle/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_traumnovelle_03",
+    "edition_id": "ae_work_schnitzler_traumnovelle",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_traumnovelle/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_fraeulein_else_01",
+    "edition_id": "ae_work_schnitzler_fraeulein_else",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_fraeulein_else/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_fraeulein_else_02",
+    "edition_id": "ae_work_schnitzler_fraeulein_else",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_fraeulein_else/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_fraeulein_else_03",
+    "edition_id": "ae_work_schnitzler_fraeulein_else",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_fraeulein_else/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_leutnant_gustl_01",
+    "edition_id": "ae_work_schnitzler_leutnant_gustl",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_leutnant_gustl/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_leutnant_gustl_02",
+    "edition_id": "ae_work_schnitzler_leutnant_gustl",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_leutnant_gustl/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_schnitzler_leutnant_gustl_03",
+    "edition_id": "ae_work_schnitzler_leutnant_gustl",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_schnitzler_leutnant_gustl/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_wedekind_fruehlings_erwachen_01",
+    "edition_id": "ae_work_wedekind_fruehlings_erwachen",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_wedekind_fruehlings_erwachen/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_wedekind_fruehlings_erwachen_02",
+    "edition_id": "ae_work_wedekind_fruehlings_erwachen",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_wedekind_fruehlings_erwachen/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_wedekind_fruehlings_erwachen_03",
+    "edition_id": "ae_work_wedekind_fruehlings_erwachen",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_wedekind_fruehlings_erwachen/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_die_verwandlung_01",
+    "edition_id": "ae_work_kafka_die_verwandlung",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_die_verwandlung/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_die_verwandlung_02",
+    "edition_id": "ae_work_kafka_die_verwandlung",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_die_verwandlung/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_die_verwandlung_03",
+    "edition_id": "ae_work_kafka_die_verwandlung",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_die_verwandlung/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_der_process_01",
+    "edition_id": "ae_work_kafka_der_process",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_der_process/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_der_process_02",
+    "edition_id": "ae_work_kafka_der_process",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_der_process/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_der_process_03",
+    "edition_id": "ae_work_kafka_der_process",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_der_process/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_das_urteil_01",
+    "edition_id": "ae_work_kafka_das_urteil",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_das_urteil/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_das_urteil_02",
+    "edition_id": "ae_work_kafka_das_urteil",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_das_urteil/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_das_urteil_03",
+    "edition_id": "ae_work_kafka_das_urteil",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_das_urteil/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_in_der_strafkolonie_01",
+    "edition_id": "ae_work_kafka_in_der_strafkolonie",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_in_der_strafkolonie/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_in_der_strafkolonie_02",
+    "edition_id": "ae_work_kafka_in_der_strafkolonie",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_in_der_strafkolonie/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_kafka_in_der_strafkolonie_03",
+    "edition_id": "ae_work_kafka_in_der_strafkolonie",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_kafka_in_der_strafkolonie/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_buddenbrooks_01",
+    "edition_id": "ae_work_thomas_mann_buddenbrooks",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_buddenbrooks/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_buddenbrooks_02",
+    "edition_id": "ae_work_thomas_mann_buddenbrooks",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_buddenbrooks/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_buddenbrooks_03",
+    "edition_id": "ae_work_thomas_mann_buddenbrooks",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_buddenbrooks/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_der_zauberberg_01",
+    "edition_id": "ae_work_thomas_mann_der_zauberberg",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_der_zauberberg/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_der_zauberberg_02",
+    "edition_id": "ae_work_thomas_mann_der_zauberberg",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_der_zauberberg/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_der_zauberberg_03",
+    "edition_id": "ae_work_thomas_mann_der_zauberberg",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_der_zauberberg/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_der_tod_in_venedig_01",
+    "edition_id": "ae_work_thomas_mann_der_tod_in_venedig",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_der_tod_in_venedig/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_der_tod_in_venedig_02",
+    "edition_id": "ae_work_thomas_mann_der_tod_in_venedig",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_der_tod_in_venedig/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_der_tod_in_venedig_03",
+    "edition_id": "ae_work_thomas_mann_der_tod_in_venedig",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_der_tod_in_venedig/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_tonio_kroeger_01",
+    "edition_id": "ae_work_thomas_mann_tonio_kroeger",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_tonio_kroeger/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_tonio_kroeger_02",
+    "edition_id": "ae_work_thomas_mann_tonio_kroeger",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_tonio_kroeger/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_thomas_mann_tonio_kroeger_03",
+    "edition_id": "ae_work_thomas_mann_tonio_kroeger",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_thomas_mann_tonio_kroeger/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heinrich_mann_der_untertan_01",
+    "edition_id": "ae_work_heinrich_mann_der_untertan",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heinrich_mann_der_untertan/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heinrich_mann_der_untertan_02",
+    "edition_id": "ae_work_heinrich_mann_der_untertan",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heinrich_mann_der_untertan/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heinrich_mann_der_untertan_03",
+    "edition_id": "ae_work_heinrich_mann_der_untertan",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heinrich_mann_der_untertan/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heinrich_mann_professor_unrat_01",
+    "edition_id": "ae_work_heinrich_mann_professor_unrat",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heinrich_mann_professor_unrat/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heinrich_mann_professor_unrat_02",
+    "edition_id": "ae_work_heinrich_mann_professor_unrat",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heinrich_mann_professor_unrat/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_heinrich_mann_professor_unrat_03",
+    "edition_id": "ae_work_heinrich_mann_professor_unrat",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_heinrich_mann_professor_unrat/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_zweig_schachnovelle_01",
+    "edition_id": "ae_work_zweig_schachnovelle",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_zweig_schachnovelle/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_zweig_schachnovelle_02",
+    "edition_id": "ae_work_zweig_schachnovelle",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_zweig_schachnovelle/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_zweig_schachnovelle_03",
+    "edition_id": "ae_work_zweig_schachnovelle",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_zweig_schachnovelle/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_zweig_sternstunden_der_menschheit_01",
+    "edition_id": "ae_work_zweig_sternstunden_der_menschheit",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_zweig_sternstunden_der_menschheit/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_zweig_sternstunden_der_menschheit_02",
+    "edition_id": "ae_work_zweig_sternstunden_der_menschheit",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_zweig_sternstunden_der_menschheit/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_zweig_sternstunden_der_menschheit_03",
+    "edition_id": "ae_work_zweig_sternstunden_der_menschheit",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_zweig_sternstunden_der_menschheit/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_roth_radetzkymarsch_01",
+    "edition_id": "ae_work_roth_radetzkymarsch",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_roth_radetzkymarsch/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_roth_radetzkymarsch_02",
+    "edition_id": "ae_work_roth_radetzkymarsch",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_roth_radetzkymarsch/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_roth_radetzkymarsch_03",
+    "edition_id": "ae_work_roth_radetzkymarsch",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_roth_radetzkymarsch/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_roth_hiob_01",
+    "edition_id": "ae_work_roth_hiob",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_roth_hiob/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_roth_hiob_02",
+    "edition_id": "ae_work_roth_hiob",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_roth_hiob/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_roth_hiob_03",
+    "edition_id": "ae_work_roth_hiob",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_roth_hiob/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_musil_die_verwirrungen_des_zoeglings_toerless_01",
+    "edition_id": "ae_work_musil_die_verwirrungen_des_zoeglings_toerless",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_musil_die_verwirrungen_des_zoeglings_toerless/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_musil_die_verwirrungen_des_zoeglings_toerless_02",
+    "edition_id": "ae_work_musil_die_verwirrungen_des_zoeglings_toerless",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_musil_die_verwirrungen_des_zoeglings_toerless/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_musil_die_verwirrungen_des_zoeglings_toerless_03",
+    "edition_id": "ae_work_musil_die_verwirrungen_des_zoeglings_toerless",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_musil_die_verwirrungen_des_zoeglings_toerless/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_tucholsky_schloss_gripsholm_01",
+    "edition_id": "ae_work_tucholsky_schloss_gripsholm",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_tucholsky_schloss_gripsholm/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_tucholsky_schloss_gripsholm_02",
+    "edition_id": "ae_work_tucholsky_schloss_gripsholm",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_tucholsky_schloss_gripsholm/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_tucholsky_schloss_gripsholm_03",
+    "edition_id": "ae_work_tucholsky_schloss_gripsholm",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_tucholsky_schloss_gripsholm/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_tucholsky_rheinsberg_01",
+    "edition_id": "ae_work_tucholsky_rheinsberg",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_tucholsky_rheinsberg/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_tucholsky_rheinsberg_02",
+    "edition_id": "ae_work_tucholsky_rheinsberg",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_tucholsky_rheinsberg/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_tucholsky_rheinsberg_03",
+    "edition_id": "ae_work_tucholsky_rheinsberg",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_tucholsky_rheinsberg/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_klaus_mann_mephisto_01",
+    "edition_id": "ae_work_klaus_mann_mephisto",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_klaus_mann_mephisto/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_klaus_mann_mephisto_02",
+    "edition_id": "ae_work_klaus_mann_mephisto",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_klaus_mann_mephisto/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_klaus_mann_mephisto_03",
+    "edition_id": "ae_work_klaus_mann_mephisto",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_klaus_mann_mephisto/kapitel_03.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lasker_schueler_gedichte_und_lyrische_werke_01",
+    "edition_id": "ae_work_lasker_schueler_gedichte_und_lyrische_werke",
+    "track_no": 1,
+    "title": "Kapitel 1",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lasker_schueler_gedichte_und_lyrische_werke/kapitel_01.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lasker_schueler_gedichte_und_lyrische_werke_02",
+    "edition_id": "ae_work_lasker_schueler_gedichte_und_lyrische_werke",
+    "track_no": 2,
+    "title": "Kapitel 2",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lasker_schueler_gedichte_und_lyrische_werke/kapitel_02.mp3",
+    "status": "draft_mock"
+  },
+  {
+    "id": "at_work_lasker_schueler_gedichte_und_lyrische_werke_03",
+    "edition_id": "ae_work_lasker_schueler_gedichte_und_lyrische_werke",
+    "track_no": 3,
+    "title": "Kapitel 3",
+    "duration_sec": 600,
+    "storage_path": "mock/audio/work_lasker_schueler_gedichte_und_lyrische_werke/kapitel_03.mp3",
+    "status": "draft_mock"
+  }
+]
