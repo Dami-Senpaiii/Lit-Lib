@@ -1,0 +1,198 @@
+[
+  {
+    "id": "author_lessing",
+    "name": "Gotthold Ephraim Lessing",
+    "birth_year": 1729,
+    "death_year": 1781,
+    "primary_period_id": "period_aufklaerung_empfindsamkeit"
+  },
+  {
+    "id": "author_goethe",
+    "name": "Johann Wolfgang von Goethe",
+    "birth_year": 1749,
+    "death_year": 1832,
+    "primary_period_id": "period_sturm_und_drang_klassik"
+  },
+  {
+    "id": "author_schiller",
+    "name": "Friedrich Schiller",
+    "birth_year": 1759,
+    "death_year": 1805,
+    "primary_period_id": "period_sturm_und_drang_klassik"
+  },
+  {
+    "id": "author_hoffmann",
+    "name": "E.T.A. Hoffmann",
+    "birth_year": 1776,
+    "death_year": 1822,
+    "primary_period_id": "period_romantik"
+  },
+  {
+    "id": "author_eichendorff",
+    "name": "Joseph von Eichendorff",
+    "birth_year": 1788,
+    "death_year": 1857,
+    "primary_period_id": "period_romantik"
+  },
+  {
+    "id": "author_novalis",
+    "name": "Novalis",
+    "birth_year": 1772,
+    "death_year": 1801,
+    "primary_period_id": "period_romantik"
+  },
+  {
+    "id": "author_kleist",
+    "name": "Heinrich von Kleist",
+    "birth_year": 1777,
+    "death_year": 1811,
+    "primary_period_id": "period_zwischen_klassik_romantik"
+  },
+  {
+    "id": "author_buechner",
+    "name": "Georg Büchner",
+    "birth_year": 1813,
+    "death_year": 1837,
+    "primary_period_id": "period_vormaerz_biedermeier"
+  },
+  {
+    "id": "author_heine",
+    "name": "Heinrich Heine",
+    "birth_year": 1797,
+    "death_year": 1856,
+    "primary_period_id": "period_vormaerz_biedermeier"
+  },
+  {
+    "id": "author_droste",
+    "name": "Annette von Droste-Hülshoff",
+    "birth_year": 1797,
+    "death_year": 1848,
+    "primary_period_id": "period_vormaerz_biedermeier"
+  },
+  {
+    "id": "author_moerike",
+    "name": "Eduard Mörike",
+    "birth_year": 1804,
+    "death_year": 1875,
+    "primary_period_id": "period_vormaerz_biedermeier"
+  },
+  {
+    "id": "author_fontane",
+    "name": "Theodor Fontane",
+    "birth_year": 1819,
+    "death_year": 1898,
+    "primary_period_id": "period_buergerlicher_realismus"
+  },
+  {
+    "id": "author_keller",
+    "name": "Gottfried Keller",
+    "birth_year": 1819,
+    "death_year": 1890,
+    "primary_period_id": "period_buergerlicher_realismus"
+  },
+  {
+    "id": "author_storm",
+    "name": "Theodor Storm",
+    "birth_year": 1817,
+    "death_year": 1888,
+    "primary_period_id": "period_buergerlicher_realismus"
+  },
+  {
+    "id": "author_gotthelf",
+    "name": "Jeremias Gotthelf",
+    "birth_year": 1797,
+    "death_year": 1854,
+    "primary_period_id": "period_buergerlicher_realismus"
+  },
+  {
+    "id": "author_ebner",
+    "name": "Marie von Ebner-Eschenbach",
+    "birth_year": 1830,
+    "death_year": 1916,
+    "primary_period_id": "period_buergerlicher_realismus"
+  },
+  {
+    "id": "author_hauptmann",
+    "name": "Gerhart Hauptmann",
+    "birth_year": 1862,
+    "death_year": 1946,
+    "primary_period_id": "period_naturalismus_jahrhundertwende"
+  },
+  {
+    "id": "author_schnitzler",
+    "name": "Arthur Schnitzler",
+    "birth_year": 1862,
+    "death_year": 1931,
+    "primary_period_id": "period_naturalismus_jahrhundertwende"
+  },
+  {
+    "id": "author_wedekind",
+    "name": "Frank Wedekind",
+    "birth_year": 1864,
+    "death_year": 1918,
+    "primary_period_id": "period_naturalismus_jahrhundertwende"
+  },
+  {
+    "id": "author_kafka",
+    "name": "Franz Kafka",
+    "birth_year": 1883,
+    "death_year": 1924,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_thomas_mann",
+    "name": "Thomas Mann",
+    "birth_year": 1875,
+    "death_year": 1955,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_heinrich_mann",
+    "name": "Heinrich Mann",
+    "birth_year": 1871,
+    "death_year": 1950,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_zweig",
+    "name": "Stefan Zweig",
+    "birth_year": 1881,
+    "death_year": 1942,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_roth",
+    "name": "Joseph Roth",
+    "birth_year": 1894,
+    "death_year": 1939,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_musil",
+    "name": "Robert Musil",
+    "birth_year": 1880,
+    "death_year": 1942,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_tucholsky",
+    "name": "Kurt Tucholsky",
+    "birth_year": 1890,
+    "death_year": 1935,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_klaus_mann",
+    "name": "Klaus Mann",
+    "birth_year": 1906,
+    "death_year": 1949,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  },
+  {
+    "id": "author_lasker_schueler",
+    "name": "Else Lasker-Schüler",
+    "birth_year": 1869,
+    "death_year": 1945,
+    "primary_period_id": "period_moderne_expressionismus_exil"
+  }
+]
