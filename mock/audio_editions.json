@@ -1,0 +1,596 @@
+[
+  {
+    "id": "ae_work_lessing_nathan_der_weise",
+    "work_id": "work_lessing_nathan_der_weise",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_lessing_emilia_galotti",
+    "work_id": "work_lessing_emilia_galotti",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_lessing_minna_von_barnhelm",
+    "work_id": "work_lessing_minna_von_barnhelm",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_goethe_faust_der_tragoedie_erster_teil_faust_i",
+    "work_id": "work_goethe_faust_der_tragoedie_erster_teil_faust_i",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_goethe_die_leiden_des_jungen_werthers",
+    "work_id": "work_goethe_die_leiden_des_jungen_werthers",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_goethe_iphigenie_auf_tauris",
+    "work_id": "work_goethe_iphigenie_auf_tauris",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_goethe_goetz_von_berlichingen",
+    "work_id": "work_goethe_goetz_von_berlichingen",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schiller_die_raeuber",
+    "work_id": "work_schiller_die_raeuber",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schiller_kabale_und_liebe",
+    "work_id": "work_schiller_kabale_und_liebe",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schiller_maria_stuart",
+    "work_id": "work_schiller_maria_stuart",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schiller_wilhelm_tell",
+    "work_id": "work_schiller_wilhelm_tell",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schiller_don_karlos",
+    "work_id": "work_schiller_don_karlos",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_hoffmann_der_sandmann",
+    "work_id": "work_hoffmann_der_sandmann",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_hoffmann_der_goldne_topf",
+    "work_id": "work_hoffmann_der_goldne_topf",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_hoffmann_das_fraeulein_von_scuderi",
+    "work_id": "work_hoffmann_das_fraeulein_von_scuderi",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_eichendorff_aus_dem_leben_eines_taugenichts",
+    "work_id": "work_eichendorff_aus_dem_leben_eines_taugenichts",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_eichendorff_das_marmorbild",
+    "work_id": "work_eichendorff_das_marmorbild",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_novalis_heinrich_von_ofterdingen",
+    "work_id": "work_novalis_heinrich_von_ofterdingen",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kleist_der_zerbrochne_krug",
+    "work_id": "work_kleist_der_zerbrochne_krug",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kleist_die_marquise_von_o",
+    "work_id": "work_kleist_die_marquise_von_o",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kleist_das_erdbeben_in_chili",
+    "work_id": "work_kleist_das_erdbeben_in_chili",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kleist_prinz_friedrich_von_homburg",
+    "work_id": "work_kleist_prinz_friedrich_von_homburg",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_buechner_woyzeck",
+    "work_id": "work_buechner_woyzeck",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_buechner_dantons_tod",
+    "work_id": "work_buechner_dantons_tod",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_buechner_lenz",
+    "work_id": "work_buechner_lenz",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_buechner_leonce_und_lena",
+    "work_id": "work_buechner_leonce_und_lena",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_heine_deutschland_ein_wintermaerchen",
+    "work_id": "work_heine_deutschland_ein_wintermaerchen",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_heine_buch_der_lieder",
+    "work_id": "work_heine_buch_der_lieder",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_droste_die_judenbuche",
+    "work_id": "work_droste_die_judenbuche",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_moerike_mozart_auf_der_reise_nach_prag",
+    "work_id": "work_moerike_mozart_auf_der_reise_nach_prag",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_fontane_effi_briest",
+    "work_id": "work_fontane_effi_briest",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_fontane_irrungen_wirrungen",
+    "work_id": "work_fontane_irrungen_wirrungen",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_fontane_der_stechlin",
+    "work_id": "work_fontane_der_stechlin",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_keller_kleider_machen_leute",
+    "work_id": "work_keller_kleider_machen_leute",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_keller_romeo_und_julia_auf_dem_dorfe",
+    "work_id": "work_keller_romeo_und_julia_auf_dem_dorfe",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_storm_der_schimmelreiter",
+    "work_id": "work_storm_der_schimmelreiter",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_storm_pole_poppenspaeler",
+    "work_id": "work_storm_pole_poppenspaeler",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_gotthelf_die_schwarze_spinne",
+    "work_id": "work_gotthelf_die_schwarze_spinne",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_ebner_krambambuli",
+    "work_id": "work_ebner_krambambuli",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_ebner_das_gemeindekind",
+    "work_id": "work_ebner_das_gemeindekind",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_hauptmann_die_weber",
+    "work_id": "work_hauptmann_die_weber",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_hauptmann_bahnwaerter_thiel",
+    "work_id": "work_hauptmann_bahnwaerter_thiel",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_hauptmann_die_ratten",
+    "work_id": "work_hauptmann_die_ratten",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schnitzler_traumnovelle",
+    "work_id": "work_schnitzler_traumnovelle",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schnitzler_fraeulein_else",
+    "work_id": "work_schnitzler_fraeulein_else",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_schnitzler_leutnant_gustl",
+    "work_id": "work_schnitzler_leutnant_gustl",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_wedekind_fruehlings_erwachen",
+    "work_id": "work_wedekind_fruehlings_erwachen",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kafka_die_verwandlung",
+    "work_id": "work_kafka_die_verwandlung",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kafka_der_process",
+    "work_id": "work_kafka_der_process",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kafka_das_urteil",
+    "work_id": "work_kafka_das_urteil",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_kafka_in_der_strafkolonie",
+    "work_id": "work_kafka_in_der_strafkolonie",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_thomas_mann_buddenbrooks",
+    "work_id": "work_thomas_mann_buddenbrooks",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_thomas_mann_der_zauberberg",
+    "work_id": "work_thomas_mann_der_zauberberg",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_thomas_mann_der_tod_in_venedig",
+    "work_id": "work_thomas_mann_der_tod_in_venedig",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_thomas_mann_tonio_kroeger",
+    "work_id": "work_thomas_mann_tonio_kroeger",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_heinrich_mann_der_untertan",
+    "work_id": "work_heinrich_mann_der_untertan",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_heinrich_mann_professor_unrat",
+    "work_id": "work_heinrich_mann_professor_unrat",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_zweig_schachnovelle",
+    "work_id": "work_zweig_schachnovelle",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_zweig_sternstunden_der_menschheit",
+    "work_id": "work_zweig_sternstunden_der_menschheit",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_roth_radetzkymarsch",
+    "work_id": "work_roth_radetzkymarsch",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_roth_hiob",
+    "work_id": "work_roth_hiob",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_musil_die_verwirrungen_des_zoeglings_toerless",
+    "work_id": "work_musil_die_verwirrungen_des_zoeglings_toerless",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_tucholsky_schloss_gripsholm",
+    "work_id": "work_tucholsky_schloss_gripsholm",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_tucholsky_rheinsberg",
+    "work_id": "work_tucholsky_rheinsberg",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_klaus_mann_mephisto",
+    "work_id": "work_klaus_mann_mephisto",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  },
+  {
+    "id": "ae_work_lasker_schueler_gedichte_und_lyrische_werke",
+    "work_id": "work_lasker_schueler_gedichte_und_lyrische_werke",
+    "language": "de",
+    "narrator": "TBD",
+    "production_type": "mockup",
+    "duration_sec": 0,
+    "status": "draft_mock"
+  }
+]
