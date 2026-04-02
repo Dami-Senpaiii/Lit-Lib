@@ -58,6 +58,14 @@ input, select {
   padding: .55rem .65rem;
   font: inherit;
 }
+button {
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: .5rem .65rem;
+  font: inherit;
+  background: #fff;
+  cursor: pointer;
+}
 
 .summary-row { margin: 0.9rem 0; color: var(--muted); }
 
@@ -165,4 +173,88 @@ a { color: var(--brand); }
   border-bottom: 1px solid var(--border);
   text-align: left;
   padding: 0.5rem;
+}
+
+.teacher-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.teacher-panel-header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+}
+
+.teacher-actions {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+}
+
+.group-student-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.group-student-item {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.relevant-badge {
+  display: inline-block;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.08rem 0.45rem;
+  font-size: 0.68rem;
+  vertical-align: middle;
+}
+
+.teacher-card-actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.bookmark-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.bookmark-chip {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.2rem 0.35rem 0.2rem 0.45rem;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #fff;
+}
+
+.bookmark-chip button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
 }
