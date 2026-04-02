@@ -25,6 +25,19 @@
           Dein Browser unterstützt das Audio-Element nicht.
         </audio>
 
+        <section id="bookmarkSection" class="bookmark-section" aria-label="Lesezeichen">
+          <div class="bookmark-header">
+            <h3>Relevanz & Lesezeichen</h3>
+            <p id="relevantNotice" class="meta"></p>
+          </div>
+          <form id="bookmarkForm" class="bookmark-form" hidden>
+            <label for="bookmarkNote">Notiz zum Zeitstempel</label>
+            <input id="bookmarkNote" type="text" maxlength="180" placeholder="z. B. Stilmittel ab 01:12 erklären" />
+            <button type="submit">Zeitstempel speichern</button>
+          </form>
+          <ul id="bookmarkList" class="bookmark-list"></ul>
+        </section>
+
         <p id="accessNotice" class="player-note">Prüfe Dateiberechtigungen…</p>
       </section>
     </main>

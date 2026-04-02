@@ -143,6 +143,46 @@ function getTeacherActiveGroup() {
   return state.teacherGroups.find((group) => group.id === state.activeTeacherGroupId) || null;
 }
 
+function getStudentGroups(studentId) {
+  if (!studentId) return [];
+  const db = parseTeacherDb();
+  const groups = [];
+  for (const teacherData of Object.values(db)) {
+    for (const group of teacherData?.groups || []) {
+      if (group.studentIds?.includes(studentId)) {
+        groups.push(group);
+      }
+    }
+  }
+  return groups;
+}
+
+function getWorkContext(workId) {
+  if (state.currentUser?.role_id === 'role_teacher') {
+    const activeGroup = getTeacherActiveGroup();
+    if (!activeGroup) return { isRelevant: false, bookmarks: [], color: '' };
+    return {
+      isRelevant: activeGroup.relevantWorkIds.includes(workId),
+      bookmarks: activeGroup.bookmarks.filter((bookmark) => bookmark.workId === workId),
+      color: activeGroup.color,
+    };
+  }
+
+  if (state.currentUser?.role_id === 'role_student') {
+    const groups = getStudentGroups(state.currentUser.id);
+    const bookmarks = groups.flatMap((group) => (group.bookmarks || [])
+      .filter((bookmark) => bookmark.workId === workId)
+      .map((bookmark) => ({ ...bookmark, color: group.color, groupName: group.name })));
+    return {
+      isRelevant: groups.some((group) => group.relevantWorkIds?.includes(workId)),
+      bookmarks,
+      color: groups[0]?.color || '',
+    };
+  }
+
+  return { isRelevant: false, bookmarks: [], color: '' };
+}
+
 function loadTeacherGroups() {
   const teacherId = state.currentUser?.id;
   if (!teacherId || state.currentUser?.role_id !== 'role_teacher') {
@@ -232,13 +272,14 @@ async function renderList() {
   for (const work of filtered) {
     const node = template.content.firstElementChild.cloneNode(true);
     node.querySelector('.work-title').textContent = work.title;
-    if (activeGroup?.relevantWorkIds.includes(work.id)) {
+    const context = getWorkContext(work.id);
+    if (context.isRelevant) {
       const badge = document.createElement('span');
       badge.className = 'relevant-badge';
       badge.textContent = 'Relevant';
-      badge.style.backgroundColor = activeGroup.color;
+      badge.style.backgroundColor = context.color || '#2c59d9';
       node.querySelector('.work-title').append(' ', badge);
-      node.style.borderColor = activeGroup.color;
+      node.style.borderColor = context.color || '#2c59d9';
     }
     node.querySelector('.meta').textContent = `${work.authorName} · ${work.periodName}`;
     node.querySelector('.synopsis').textContent = work.synopsis;
@@ -256,7 +297,7 @@ async function renderList() {
       details.append(dt, dd);
     }
 
-    if (activeGroup) {
+    if (activeGroup && state.currentUser?.role_id === 'role_teacher') {
       const actions = document.createElement('div');
       actions.className = 'teacher-card-actions';
       actions.addEventListener('click', (event) => event.stopPropagation());
@@ -273,38 +314,25 @@ async function renderList() {
         renderList();
       });
 
-      const addBookmarkBtn = document.createElement('button');
-      addBookmarkBtn.type = 'button';
-      addBookmarkBtn.textContent = 'Lesezeichen setzen';
-      addBookmarkBtn.addEventListener('click', () => {
-        const note = clean(window.prompt('Tooltip-Text für das Lesezeichen', `Hinweis zu ${work.title}`));
-        const now = new Date();
-        activeGroup.bookmarks.push({
-          id: crypto.randomUUID(),
-          workId: work.id,
-          note: note || `Lesezeichen für ${work.title}`,
-          createdAt: now.toISOString(),
-        });
-        persistTeacherGroups();
-        renderList();
-      });
-
-      actions.append(toggleRelevantBtn, addBookmarkBtn);
+      actions.append(toggleRelevantBtn);
       node.append(actions);
+    }
 
-      const bookmarkWrap = document.createElement('div');
-      bookmarkWrap.className = 'bookmark-wrap';
-      const workBookmarks = activeGroup.bookmarks.filter((bookmark) => bookmark.workId === work.id);
+    const bookmarkWrap = document.createElement('div');
+    bookmarkWrap.className = 'bookmark-wrap';
 
-      for (const bookmark of workBookmarks) {
-        const chip = document.createElement('span');
-        chip.className = 'bookmark-chip';
-        chip.style.borderColor = activeGroup.color;
-        chip.style.color = activeGroup.color;
-        const stamp = new Date(bookmark.createdAt).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-        chip.textContent = `🔖 ${stamp}`;
-        chip.title = bookmark.note;
+    for (const bookmark of context.bookmarks) {
+      const chip = document.createElement('span');
+      chip.className = 'bookmark-chip';
+      chip.style.borderColor = bookmark.color || context.color || '#2c59d9';
+      chip.style.color = bookmark.color || context.color || '#2c59d9';
+      const stamp = new Date(bookmark.createdAt).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+      chip.textContent = `🔖 ${stamp} · ${clean(bookmark.note || 'Notiz')}`;
+      if (bookmark.groupName && state.currentUser?.role_id === 'role_student') {
+        chip.textContent = `${chip.textContent} (${bookmark.groupName})`;
+      }
 
+      if (activeGroup && state.currentUser?.role_id === 'role_teacher') {
         const removeBtn = document.createElement('button');
         removeBtn.type = 'button';
         removeBtn.textContent = '×';
@@ -315,12 +343,11 @@ async function renderList() {
           persistTeacherGroups();
           renderList();
         });
-
         chip.append(removeBtn);
-        bookmarkWrap.append(chip);
       }
-      node.append(bookmarkWrap);
+      bookmarkWrap.append(chip);
     }
+    node.append(bookmarkWrap);
 
     if (!canOpen) {
       node.classList.add('blocked-card');
@@ -332,6 +359,9 @@ async function renderList() {
 
     const playerUrl = new URL('./audio-player.html', import.meta.url);
     playerUrl.searchParams.set('workId', work.id);
+    if (state.currentUser?.role_id === 'role_teacher' && activeGroup) {
+      playerUrl.searchParams.set('groupId', activeGroup.id);
+    }
 
     node.classList.add('clickable-card');
     node.tabIndex = 0;
