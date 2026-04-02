@@ -85,3 +85,30 @@ input, select {
 dt { color: var(--muted); }
 
 a { color: var(--brand); }
+
+.open-work-link,
+.back-link {
+  display: inline-block;
+  margin-top: 0.85rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.player-shell {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.audio-player {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.player-note {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

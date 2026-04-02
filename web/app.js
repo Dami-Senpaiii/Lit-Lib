@@ -116,6 +116,11 @@ function renderList() {
       details.append(dt, dd);
     }
 
+    const openLink = node.querySelector('.open-work-link');
+    const playerUrl = new URL('./audio-player.html', import.meta.url);
+    playerUrl.searchParams.set('workId', work.id);
+    openLink.href = playerUrl.toString();
+
     workList.append(node);
   }
 }
