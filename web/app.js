@@ -107,10 +107,25 @@ function renderList() {
       details.append(dt, dd);
     }
 
-    const openLink = node.querySelector('.open-work-link');
     const playerUrl = new URL('./audio-player.html', import.meta.url);
     playerUrl.searchParams.set('workId', work.id);
-    openLink.href = playerUrl.toString();
+
+    node.classList.add('clickable-card');
+    node.tabIndex = 0;
+    node.setAttribute('role', 'link');
+    node.setAttribute('aria-label', `${work.title} öffnen`);
+
+    const openWork = () => {
+      window.location.assign(playerUrl.toString());
+    };
+
+    node.addEventListener('click', openWork);
+    node.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openWork();
+      }
+    });
 
     workList.append(node);
   }
