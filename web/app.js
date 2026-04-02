@@ -9,7 +9,6 @@ const resultSummary = document.getElementById('resultSummary');
 const searchInput = document.getElementById('searchInput');
 const periodSelect = document.getElementById('periodSelect');
 const authorSelect = document.getElementById('authorSelect');
-const gradeSelect = document.getElementById('gradeSelect');
 const template = document.getElementById('workCardTemplate');
 
 const clean = (value) => String(value ?? '').trim();
@@ -55,8 +54,6 @@ function enrichWork(work) {
     authorName: clean(author?.name || 'Unbekannt'),
     periodName: clean(period?.name || 'Unbekannt'),
     synopsis: clean(work.synopsis || 'Keine Kurzbeschreibung vorhanden.'),
-    gradeMin: Number(work.grade_min) || null,
-    gradeMax: Number(work.grade_max) || null,
   };
 }
 
@@ -64,14 +61,10 @@ function matchesFilters(work) {
   const search = clean(searchInput.value).toLowerCase();
   const selectedAuthor = clean(authorSelect.value);
   const selectedPeriod = clean(periodSelect.value);
-  const minGradeFilter = Number(gradeSelect.value) || null;
 
   if (selectedAuthor && work.authorName !== selectedAuthor) return false;
   if (selectedPeriod && work.periodName !== selectedPeriod) return false;
 
-  if (minGradeFilter && work.gradeMin && work.gradeMin < minGradeFilter) {
-    return false;
-  }
 
   if (!search) return true;
 
@@ -103,9 +96,7 @@ function renderList() {
 
     const details = node.querySelector('.details');
     const fields = [
-      ['Klassenstufe', work.gradeMin && work.gradeMax ? `${work.gradeMin}–${work.gradeMax}` : 'n/a'],
       ['Status', clean(work.status || 'unbekannt')],
-      ['Werk-ID', clean(work.id)],
     ];
 
     for (const [key, value] of fields) {
@@ -131,7 +122,7 @@ async function init() {
     hydrateLookups(authors, periods);
     state.works = works.map(enrichWork);
 
-    [searchInput, authorSelect, periodSelect, gradeSelect].forEach((element) => {
+    [searchInput, authorSelect, periodSelect].forEach((element) => {
       element.addEventListener('input', renderList);
       element.addEventListener('change', renderList);
     });
