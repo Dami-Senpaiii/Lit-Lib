@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!mock/|web/|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]
