@@ -86,12 +86,27 @@ dt { color: var(--muted); }
 
 a { color: var(--brand); }
 
-.open-work-link,
 .back-link {
   display: inline-block;
   margin-top: 0.85rem;
   text-decoration: none;
   font-weight: 600;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.clickable-card:hover {
+  transform: translateY(-2px);
+  border-color: #b7c4e8;
+  box-shadow: 0 10px 24px rgba(23, 32, 56, 0.08);
+}
+
+.clickable-card:focus-visible {
+  outline: 3px solid rgba(44, 89, 217, 0.35);
+  outline-offset: 2px;
 }
 
 .player-shell {
