@@ -41,6 +41,17 @@ const deleteGroupButton = document.getElementById('deleteGroupButton');
 const studentSelect = document.getElementById('studentSelect');
 const addStudentButton = document.getElementById('addStudentButton');
 const groupStudentList = document.getElementById('groupStudentList');
+const hasTeacherUi = Boolean(
+  teacherPanel
+  && teacherGroupSelect
+  && newGroupName
+  && newGroupColor
+  && createGroupButton
+  && deleteGroupButton
+  && studentSelect
+  && addStudentButton
+  && groupStudentList
+);
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -108,7 +119,7 @@ function updateAuthView() {
     authForm.hidden = false;
     logoutButton.hidden = true;
     adminLink.hidden = true;
-    teacherPanel.hidden = true;
+    if (teacherPanel) teacherPanel.hidden = true;
     return;
   }
 
@@ -116,7 +127,7 @@ function updateAuthView() {
   authForm.hidden = true;
   logoutButton.hidden = false;
   adminLink.hidden = user.role_id !== 'role_admin';
-  teacherPanel.hidden = user.role_id !== 'role_teacher';
+  if (teacherPanel) teacherPanel.hidden = user.role_id !== 'role_teacher';
 }
 
 function parseTeacherDb() {
@@ -158,7 +169,7 @@ function persistTeacherGroups() {
 }
 
 function renderTeacherMenu() {
-  if (state.currentUser?.role_id !== 'role_teacher') return;
+  if (!hasTeacherUi || state.currentUser?.role_id !== 'role_teacher') return;
 
   teacherGroupSelect.innerHTML = '<option value="">Keine Gruppe</option>';
   for (const group of state.teacherGroups) {
@@ -381,6 +392,8 @@ async function setupAuth() {
 }
 
 function setupTeacherEvents() {
+  if (!hasTeacherUi) return;
+
   teacherGroupSelect.addEventListener('change', () => {
     state.activeTeacherGroupId = teacherGroupSelect.value;
     persistTeacherGroups();
