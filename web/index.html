@@ -52,6 +52,51 @@
         </div>
       </section>
 
+      <section id="teacherPanel" class="teacher-panel" aria-label="Lehrer-Menü" hidden>
+        <div class="teacher-panel-header">
+          <h2>Lehrer-Menü</h2>
+          <p class="meta">Markierungen und Lesezeichen werden pro Schülergruppe gespeichert.</p>
+        </div>
+
+        <div class="teacher-grid">
+          <div class="control-group">
+            <label for="teacherGroupSelect">Aktive Schülergruppe</label>
+            <select id="teacherGroupSelect">
+              <option value="">Keine Gruppe</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="newGroupName">Neue Gruppe</label>
+            <input id="newGroupName" type="text" placeholder="z. B. 10a - Goethe" />
+          </div>
+
+          <div class="control-group">
+            <label for="newGroupColor">Gruppenfarbe</label>
+            <input id="newGroupColor" type="color" value="#2c59d9" />
+          </div>
+        </div>
+
+        <div class="teacher-actions">
+          <button id="createGroupButton" type="button">Gruppe anlegen</button>
+          <button id="deleteGroupButton" type="button">Gruppe löschen</button>
+        </div>
+
+        <div class="teacher-grid">
+          <div class="control-group">
+            <label for="studentSelect">Schüler zur Gruppe hinzufügen</label>
+            <select id="studentSelect">
+              <option value="">Schüler wählen</option>
+            </select>
+          </div>
+          <div class="teacher-actions">
+            <button id="addStudentButton" type="button">Schüler hinzufügen</button>
+          </div>
+        </div>
+
+        <ul id="groupStudentList" class="group-student-list"></ul>
+      </section>
+
       <section class="summary-row">
         <p id="resultSummary">Lade Bibliothek…</p>
       </section>
