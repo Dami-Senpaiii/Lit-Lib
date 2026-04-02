@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LitAudio – Audio-Player</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="badge">MVP Prototype</p>
+        <h1>Audio-Player</h1>
+        <p class="subline">Höre dein ausgewähltes Werk direkt im Browser.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="player-shell" aria-label="Audio-Player für Werk">
+        <a class="back-link" href="./index.html">← Zur Bibliothek</a>
+        <h2 id="playerTitle">Werk wird geladen…</h2>
+        <p id="playerMeta" class="meta"></p>
+
+        <audio id="audioPlayer" class="audio-player" controls preload="metadata">
+          <source src="../mock/ff-16b-2c-44100hz.mp3" type="audio/mpeg" />
+          Dein Browser unterstützt das Audio-Element nicht.
+        </audio>
+
+        <p class="player-note">
+          Test-Audio aus <code>mock/ff-16b-2c-44100hz.mp3</code>.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="./audio-player.js"></script>
+  </body>
+</html>
