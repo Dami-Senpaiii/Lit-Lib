@@ -1,5 +1,9 @@
+import { canAccessWork, getCurrentUser, protectedFetch } from './auth.js';
+
 const playerTitle = document.getElementById('playerTitle');
 const playerMeta = document.getElementById('playerMeta');
+const audioPlayer = document.getElementById('audioPlayer');
+const accessNotice = document.getElementById('accessNotice');
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -18,6 +22,14 @@ function getWorkId() {
 
 async function init() {
   const workId = getWorkId();
+  const currentUser = await getCurrentUser();
+
+  if (!currentUser) {
+    playerTitle.textContent = 'Anmeldung erforderlich';
+    playerMeta.textContent = 'Bitte zuerst in der Bibliothek anmelden.';
+    audioPlayer.remove();
+    return;
+  }
 
   if (!workId) {
     playerTitle.textContent = 'Kein Werk ausgewählt';
@@ -39,15 +51,29 @@ async function init() {
       return;
     }
 
+    if (!(await canAccessWork(work))) {
+      playerTitle.textContent = 'Zugriff verweigert';
+      playerMeta.textContent = 'Deine Rolle erlaubt keinen Zugriff auf dieses Werk.';
+      audioPlayer.remove();
+      return;
+    }
+
     const author = authors.find((item) => item.id === work.author_id);
     const period = periods.find((item) => item.id === work.period_id);
 
     playerTitle.textContent = clean(work.title);
     playerMeta.textContent = `${clean(author?.name || 'Unbekannt')} · ${clean(period?.name || 'Unbekannt')}`;
+
+    const audioResponse = await protectedFetch(new URL('../mock/ff-16b-2c-44100hz.mp3', import.meta.url), 'media.audio.read');
+    const audioBlob = await audioResponse.blob();
+    audioPlayer.src = URL.createObjectURL(audioBlob);
+
+    accessNotice.textContent = `Audio geladen für ${currentUser.name}. Dateizugriff wurde über Rollenrechte geprüft.`;
   } catch (error) {
     console.error(error);
     playerTitle.textContent = 'Werk konnte nicht geladen werden';
     playerMeta.textContent = 'Bitte später erneut versuchen.';
+    accessNotice.textContent = error.message;
   }
 }
 

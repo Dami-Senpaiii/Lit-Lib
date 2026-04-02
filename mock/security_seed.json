@@ -1,0 +1,56 @@
+{
+  "roles": [
+    {
+      "id": "role_student",
+      "name": "Schüler",
+      "permissions": ["library.view", "work.open", "media.audio.read"]
+    },
+    {
+      "id": "role_teacher",
+      "name": "Lehrkraft",
+      "permissions": ["library.view", "work.open", "media.audio.read"]
+    },
+    {
+      "id": "role_admin",
+      "name": "Administrator",
+      "permissions": [
+        "library.view",
+        "work.open",
+        "media.audio.read",
+        "admin.access",
+        "users.manage"
+      ]
+    }
+  ],
+  "work_access_policies": [
+    { "role_id": "role_student", "scope": "featured_only" },
+    { "role_id": "role_teacher", "scope": "all" },
+    { "role_id": "role_admin", "scope": "all" }
+  ],
+  "users": [
+    {
+      "id": "user_admin",
+      "name": "Admin Demo",
+      "email": "admin@litaudio.local",
+      "password": "admin123",
+      "role_id": "role_admin",
+      "active": true
+    },
+    {
+      "id": "user_teacher",
+      "name": "Lehrkraft Demo",
+      "email": "lehrer@litaudio.local",
+      "password": "teacher123",
+      "role_id": "role_teacher",
+      "active": true
+    },
+    {
+      "id": "user_student",
+      "name": "Schüler Demo",
+      "email": "schueler@litaudio.local",
+      "password": "student123",
+      "role_id": "role_student",
+      "active": true
+    }
+  ]
+}

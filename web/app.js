@@ -1,7 +1,16 @@
+import {
+  canAccessWork,
+  clearSession,
+  getCurrentUser,
+  initSecurityDb,
+  login,
+} from './auth.js';
+
 const state = {
   works: [],
   authorsById: new Map(),
   periodsById: new Map(),
+  currentUser: null,
 };
 
 const workList = document.getElementById('workList');
@@ -10,6 +19,13 @@ const searchInput = document.getElementById('searchInput');
 const periodSelect = document.getElementById('periodSelect');
 const authorSelect = document.getElementById('authorSelect');
 const template = document.getElementById('workCardTemplate');
+const authForm = document.getElementById('authForm');
+const emailInput = document.getElementById('loginEmail');
+const passwordInput = document.getElementById('loginPassword');
+const authMessage = document.getElementById('authMessage');
+const authStatus = document.getElementById('authStatus');
+const logoutButton = document.getElementById('logoutButton');
+const adminLink = document.getElementById('adminLink');
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -65,16 +81,28 @@ function matchesFilters(work) {
   if (selectedAuthor && work.authorName !== selectedAuthor) return false;
   if (selectedPeriod && work.periodName !== selectedPeriod) return false;
 
-
   if (!search) return true;
 
-  return (
-    work.title.toLowerCase().includes(search) ||
-    work.authorName.toLowerCase().includes(search)
-  );
+  return work.title.toLowerCase().includes(search) || work.authorName.toLowerCase().includes(search);
 }
 
-function renderList() {
+function updateAuthView() {
+  const user = state.currentUser;
+  if (!user) {
+    authStatus.textContent = 'Nicht angemeldet';
+    authForm.hidden = false;
+    logoutButton.hidden = true;
+    adminLink.hidden = true;
+    return;
+  }
+
+  authStatus.textContent = `Angemeldet als ${user.name} (${user.role_id})`;
+  authForm.hidden = true;
+  logoutButton.hidden = false;
+  adminLink.hidden = user.role_id !== 'role_admin';
+}
+
+async function renderList() {
   const filtered = state.works.filter(matchesFilters);
 
   resultSummary.textContent = `${filtered.length} von ${state.works.length} Werken angezeigt`;
@@ -94,10 +122,10 @@ function renderList() {
     node.querySelector('.meta').textContent = `${work.authorName} · ${work.periodName}`;
     node.querySelector('.synopsis').textContent = work.synopsis;
 
+    const canOpen = await canAccessWork(work);
+
     const details = node.querySelector('.details');
-    const fields = [
-      ['Status', clean(work.status || 'unbekannt')],
-    ];
+    const fields = [['Status', clean(work.status || 'unbekannt')], ['Zugriff', canOpen ? 'erlaubt' : 'gesperrt']];
 
     for (const [key, value] of fields) {
       const dt = document.createElement('dt');
@@ -105,6 +133,14 @@ function renderList() {
       const dd = document.createElement('dd');
       dd.textContent = value;
       details.append(dt, dd);
+    }
+
+    if (!canOpen) {
+      node.classList.add('blocked-card');
+      node.setAttribute('aria-disabled', 'true');
+      node.querySelector('.synopsis').textContent = 'Für dieses Werk fehlen dir Rechte oder eine aktive Anmeldung.';
+      workList.append(node);
+      continue;
     }
 
     const playerUrl = new URL('./audio-player.html', import.meta.url);
@@ -131,8 +167,40 @@ function renderList() {
   }
 }
 
+async function setupAuth() {
+  state.currentUser = await getCurrentUser();
+  updateAuthView();
+
+  authForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    authMessage.textContent = '';
+
+    try {
+      await login(emailInput.value, passwordInput.value);
+      state.currentUser = await getCurrentUser();
+      updateAuthView();
+      await renderList();
+      authMessage.textContent = 'Login erfolgreich.';
+      authForm.reset();
+    } catch (error) {
+      authMessage.textContent = error.message;
+    }
+  });
+
+  logoutButton.addEventListener('click', async () => {
+    clearSession();
+    state.currentUser = null;
+    updateAuthView();
+    await renderList();
+    authMessage.textContent = 'Du wurdest abgemeldet.';
+  });
+}
+
 async function init() {
   try {
+    await initSecurityDb();
+    await setupAuth();
+
     const [works, authors, periods] = await Promise.all([
       loadJson(new URL('../mock/works.json', import.meta.url)),
       loadJson(new URL('../mock/authors.json', import.meta.url)),
@@ -143,11 +211,15 @@ async function init() {
     state.works = works.map(enrichWork);
 
     [searchInput, authorSelect, periodSelect].forEach((element) => {
-      element.addEventListener('input', renderList);
-      element.addEventListener('change', renderList);
+      element.addEventListener('input', () => {
+        renderList();
+      });
+      element.addEventListener('change', () => {
+        renderList();
+      });
     });
 
-    renderList();
+    await renderList();
   } catch (error) {
     console.error(error);
     resultSummary.textContent = 'Bibliothek konnte nicht geladen werden.';

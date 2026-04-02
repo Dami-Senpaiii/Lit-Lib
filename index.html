@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LitAudio – Web MVP</title>
-    <meta
-      name="description"
-      content="LitAudio Web MVP: Klassiker entdecken, filtern und direkt starten."
-    />
     <link rel="stylesheet" href="./web/styles.css" />
   </head>
   <body>
@@ -20,6 +16,21 @@
     </header>
 
     <main class="container">
+      <section class="auth-shell" aria-label="Login und Session">
+        <p id="authStatus" class="meta">Nicht angemeldet</p>
+        <form id="authForm" class="auth-form-grid">
+          <input id="loginEmail" type="email" placeholder="E-Mail" required />
+          <input id="loginPassword" type="password" placeholder="Passwort" required />
+          <button type="submit">Anmelden</button>
+        </form>
+        <div class="auth-actions">
+          <button id="logoutButton" type="button" hidden>Abmelden</button>
+          <a id="adminLink" href="./web/admin.html" hidden>Admin öffnen</a>
+        </div>
+        <p id="authMessage" class="meta"></p>
+        <p class="meta">Demo: admin@litaudio.local / admin123 · lehrer@litaudio.local / teacher123 · schueler@litaudio.local / student123</p>
+      </section>
+
       <section class="controls" aria-label="Filter und Suche">
         <div class="control-group">
           <label for="searchInput">Suche</label>
@@ -39,7 +50,6 @@
             <option value="">Alle</option>
           </select>
         </div>
-
       </section>
 
       <section class="summary-row">
