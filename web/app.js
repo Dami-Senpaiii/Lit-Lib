@@ -3,14 +3,20 @@ import {
   clearSession,
   getCurrentUser,
   initSecurityDb,
+  listUsers,
   login,
 } from './auth.js';
+
+const STORAGE_TEACHER_GROUPS = 'litaudio.teacher-groups.v1';
 
 const state = {
   works: [],
   authorsById: new Map(),
   periodsById: new Map(),
   currentUser: null,
+  students: [],
+  teacherGroups: [],
+  activeTeacherGroupId: '',
 };
 
 const workList = document.getElementById('workList');
@@ -26,6 +32,15 @@ const authMessage = document.getElementById('authMessage');
 const authStatus = document.getElementById('authStatus');
 const logoutButton = document.getElementById('logoutButton');
 const adminLink = document.getElementById('adminLink');
+const teacherPanel = document.getElementById('teacherPanel');
+const teacherGroupSelect = document.getElementById('teacherGroupSelect');
+const newGroupName = document.getElementById('newGroupName');
+const newGroupColor = document.getElementById('newGroupColor');
+const createGroupButton = document.getElementById('createGroupButton');
+const deleteGroupButton = document.getElementById('deleteGroupButton');
+const studentSelect = document.getElementById('studentSelect');
+const addStudentButton = document.getElementById('addStudentButton');
+const groupStudentList = document.getElementById('groupStudentList');
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -93,6 +108,7 @@ function updateAuthView() {
     authForm.hidden = false;
     logoutButton.hidden = true;
     adminLink.hidden = true;
+    teacherPanel.hidden = true;
     return;
   }
 
@@ -100,10 +116,96 @@ function updateAuthView() {
   authForm.hidden = true;
   logoutButton.hidden = false;
   adminLink.hidden = user.role_id !== 'role_admin';
+  teacherPanel.hidden = user.role_id !== 'role_teacher';
+}
+
+function parseTeacherDb() {
+  const raw = localStorage.getItem(STORAGE_TEACHER_GROUPS);
+  return raw ? JSON.parse(raw) : {};
+}
+
+function saveTeacherDb(db) {
+  localStorage.setItem(STORAGE_TEACHER_GROUPS, JSON.stringify(db));
+}
+
+function getTeacherActiveGroup() {
+  return state.teacherGroups.find((group) => group.id === state.activeTeacherGroupId) || null;
+}
+
+function loadTeacherGroups() {
+  const teacherId = state.currentUser?.id;
+  if (!teacherId || state.currentUser?.role_id !== 'role_teacher') {
+    state.teacherGroups = [];
+    state.activeTeacherGroupId = '';
+    return;
+  }
+
+  const db = parseTeacherDb();
+  state.teacherGroups = db[teacherId]?.groups || [];
+  state.activeTeacherGroupId = db[teacherId]?.activeGroupId || state.teacherGroups[0]?.id || '';
+}
+
+function persistTeacherGroups() {
+  const teacherId = state.currentUser?.id;
+  if (!teacherId || state.currentUser?.role_id !== 'role_teacher') return;
+
+  const db = parseTeacherDb();
+  db[teacherId] = {
+    groups: state.teacherGroups,
+    activeGroupId: state.activeTeacherGroupId,
+  };
+  saveTeacherDb(db);
+}
+
+function renderTeacherMenu() {
+  if (state.currentUser?.role_id !== 'role_teacher') return;
+
+  teacherGroupSelect.innerHTML = '<option value="">Keine Gruppe</option>';
+  for (const group of state.teacherGroups) {
+    const option = document.createElement('option');
+    option.value = group.id;
+    option.textContent = `${group.name} (${group.color})`;
+    teacherGroupSelect.append(option);
+  }
+  teacherGroupSelect.value = state.activeTeacherGroupId;
+
+  studentSelect.innerHTML = '<option value="">Schüler wählen</option>';
+  for (const student of state.students) {
+    const option = document.createElement('option');
+    option.value = student.id;
+    option.textContent = student.name;
+    studentSelect.append(option);
+  }
+
+  const activeGroup = getTeacherActiveGroup();
+  groupStudentList.innerHTML = '';
+  if (!activeGroup) return;
+
+  for (const studentId of activeGroup.studentIds) {
+    const student = state.students.find((item) => item.id === studentId);
+    if (!student) continue;
+
+    const li = document.createElement('li');
+    li.className = 'group-student-item';
+    li.textContent = student.name;
+
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.textContent = 'Entfernen';
+    removeBtn.addEventListener('click', () => {
+      activeGroup.studentIds = activeGroup.studentIds.filter((id) => id !== studentId);
+      persistTeacherGroups();
+      renderTeacherMenu();
+    });
+
+    li.append(removeBtn);
+    groupStudentList.append(li);
+  }
 }
 
 async function renderList() {
   const filtered = state.works.filter(matchesFilters);
+  const activeGroup = getTeacherActiveGroup();
 
   resultSummary.textContent = `${filtered.length} von ${state.works.length} Werken angezeigt`;
   workList.innerHTML = '';
@@ -119,6 +221,14 @@ async function renderList() {
   for (const work of filtered) {
     const node = template.content.firstElementChild.cloneNode(true);
     node.querySelector('.work-title').textContent = work.title;
+    if (activeGroup?.relevantWorkIds.includes(work.id)) {
+      const badge = document.createElement('span');
+      badge.className = 'relevant-badge';
+      badge.textContent = 'Relevant';
+      badge.style.backgroundColor = activeGroup.color;
+      node.querySelector('.work-title').append(' ', badge);
+      node.style.borderColor = activeGroup.color;
+    }
     node.querySelector('.meta').textContent = `${work.authorName} · ${work.periodName}`;
     node.querySelector('.synopsis').textContent = work.synopsis;
 
@@ -133,6 +243,72 @@ async function renderList() {
       const dd = document.createElement('dd');
       dd.textContent = value;
       details.append(dt, dd);
+    }
+
+    if (activeGroup) {
+      const actions = document.createElement('div');
+      actions.className = 'teacher-card-actions';
+      actions.addEventListener('click', (event) => event.stopPropagation());
+
+      const toggleRelevantBtn = document.createElement('button');
+      toggleRelevantBtn.type = 'button';
+      const isRelevant = activeGroup.relevantWorkIds.includes(work.id);
+      toggleRelevantBtn.textContent = isRelevant ? 'Relevant entfernen' : 'Als Relevant markieren';
+      toggleRelevantBtn.addEventListener('click', () => {
+        activeGroup.relevantWorkIds = isRelevant
+          ? activeGroup.relevantWorkIds.filter((id) => id !== work.id)
+          : [...activeGroup.relevantWorkIds, work.id];
+        persistTeacherGroups();
+        renderList();
+      });
+
+      const addBookmarkBtn = document.createElement('button');
+      addBookmarkBtn.type = 'button';
+      addBookmarkBtn.textContent = 'Lesezeichen setzen';
+      addBookmarkBtn.addEventListener('click', () => {
+        const note = clean(window.prompt('Tooltip-Text für das Lesezeichen', `Hinweis zu ${work.title}`));
+        const now = new Date();
+        activeGroup.bookmarks.push({
+          id: crypto.randomUUID(),
+          workId: work.id,
+          note: note || `Lesezeichen für ${work.title}`,
+          createdAt: now.toISOString(),
+        });
+        persistTeacherGroups();
+        renderList();
+      });
+
+      actions.append(toggleRelevantBtn, addBookmarkBtn);
+      node.append(actions);
+
+      const bookmarkWrap = document.createElement('div');
+      bookmarkWrap.className = 'bookmark-wrap';
+      const workBookmarks = activeGroup.bookmarks.filter((bookmark) => bookmark.workId === work.id);
+
+      for (const bookmark of workBookmarks) {
+        const chip = document.createElement('span');
+        chip.className = 'bookmark-chip';
+        chip.style.borderColor = activeGroup.color;
+        chip.style.color = activeGroup.color;
+        const stamp = new Date(bookmark.createdAt).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+        chip.textContent = `🔖 ${stamp}`;
+        chip.title = bookmark.note;
+
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.textContent = '×';
+        removeBtn.setAttribute('aria-label', 'Lesezeichen entfernen');
+        removeBtn.addEventListener('click', (event) => {
+          event.stopPropagation();
+          activeGroup.bookmarks = activeGroup.bookmarks.filter((item) => item.id !== bookmark.id);
+          persistTeacherGroups();
+          renderList();
+        });
+
+        chip.append(removeBtn);
+        bookmarkWrap.append(chip);
+      }
+      node.append(bookmarkWrap);
     }
 
     if (!canOpen) {
@@ -168,8 +344,12 @@ async function renderList() {
 }
 
 async function setupAuth() {
+  const users = await listUsers();
+  state.students = users.filter((item) => item.role_id === 'role_student');
   state.currentUser = await getCurrentUser();
+  loadTeacherGroups();
   updateAuthView();
+  renderTeacherMenu();
 
   authForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -178,7 +358,9 @@ async function setupAuth() {
     try {
       await login(emailInput.value, passwordInput.value);
       state.currentUser = await getCurrentUser();
+      loadTeacherGroups();
       updateAuthView();
+      renderTeacherMenu();
       await renderList();
       authMessage.textContent = 'Login erfolgreich.';
       authForm.reset();
@@ -190,9 +372,57 @@ async function setupAuth() {
   logoutButton.addEventListener('click', async () => {
     clearSession();
     state.currentUser = null;
+    loadTeacherGroups();
     updateAuthView();
+    renderTeacherMenu();
     await renderList();
     authMessage.textContent = 'Du wurdest abgemeldet.';
+  });
+}
+
+function setupTeacherEvents() {
+  teacherGroupSelect.addEventListener('change', () => {
+    state.activeTeacherGroupId = teacherGroupSelect.value;
+    persistTeacherGroups();
+    renderTeacherMenu();
+    renderList();
+  });
+
+  createGroupButton.addEventListener('click', () => {
+    const name = clean(newGroupName.value);
+    if (!name) return;
+    const group = {
+      id: `group_${crypto.randomUUID().slice(0, 8)}`,
+      name,
+      color: newGroupColor.value || '#2c59d9',
+      studentIds: [],
+      relevantWorkIds: [],
+      bookmarks: [],
+    };
+    state.teacherGroups.push(group);
+    state.activeTeacherGroupId = group.id;
+    newGroupName.value = '';
+    persistTeacherGroups();
+    renderTeacherMenu();
+    renderList();
+  });
+
+  deleteGroupButton.addEventListener('click', () => {
+    if (!state.activeTeacherGroupId) return;
+    state.teacherGroups = state.teacherGroups.filter((group) => group.id !== state.activeTeacherGroupId);
+    state.activeTeacherGroupId = state.teacherGroups[0]?.id || '';
+    persistTeacherGroups();
+    renderTeacherMenu();
+    renderList();
+  });
+
+  addStudentButton.addEventListener('click', () => {
+    const activeGroup = getTeacherActiveGroup();
+    const studentId = studentSelect.value;
+    if (!activeGroup || !studentId || activeGroup.studentIds.includes(studentId)) return;
+    activeGroup.studentIds.push(studentId);
+    persistTeacherGroups();
+    renderTeacherMenu();
   });
 }
 
@@ -200,6 +430,7 @@ async function init() {
   try {
     await initSecurityDb();
     await setupAuth();
+    setupTeacherEvents();
 
     const [works, authors, periods] = await Promise.all([
       loadJson(new URL('../mock/works.json', import.meta.url)),
