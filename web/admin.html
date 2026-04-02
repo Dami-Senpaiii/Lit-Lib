@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LitAudio – Admin</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="badge">MVP Prototype</p>
+        <h1>Admin-Oberfläche</h1>
+        <p class="subline">Benutzer, Rollen und Rechte verwalten.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="player-shell">
+        <a class="back-link" href="./index.html">← Zur Bibliothek</a>
+        <p id="accessState" class="meta">Prüfe Berechtigungen…</p>
+      </section>
+
+      <section class="player-shell">
+        <h2>Benutzerübersicht</h2>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>E-Mail</th>
+              <th>Rolle</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </section>
+
+      <section class="player-shell">
+        <h2>Neuen Benutzer anlegen</h2>
+        <form id="createUserForm" class="auth-form-grid">
+          <input name="name" required placeholder="Name" />
+          <input name="email" type="email" required placeholder="E-Mail" />
+          <input name="password" required placeholder="Passwort" />
+          <select id="newUserRole" name="roleId"></select>
+          <button type="submit">Benutzer erstellen</button>
+        </form>
+        <p id="adminMessage" class="meta"></p>
+      </section>
+    </main>
+
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>
