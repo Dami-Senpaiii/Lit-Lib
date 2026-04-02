@@ -136,6 +136,58 @@ a { color: var(--brand); }
   font-size: 0.9rem;
 }
 
+.bookmark-section {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.bookmark-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.bookmark-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+  align-items: flex-end;
+}
+
+.bookmark-form label {
+  width: 100%;
+}
+
+.bookmark-form input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.bookmark-list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.bookmark-list-item {
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  padding: 0.4rem 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bookmark-list-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .auth-shell {
   background: var(--card);
   border: 1px solid var(--border);

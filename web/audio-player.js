@@ -1,9 +1,15 @@
 import { canAccessWork, getCurrentUser, protectedFetch } from './auth.js';
 
+const STORAGE_TEACHER_GROUPS = 'litaudio.teacher-groups.v1';
 const playerTitle = document.getElementById('playerTitle');
 const playerMeta = document.getElementById('playerMeta');
 const audioPlayer = document.getElementById('audioPlayer');
 const accessNotice = document.getElementById('accessNotice');
+const bookmarkSection = document.getElementById('bookmarkSection');
+const relevantNotice = document.getElementById('relevantNotice');
+const bookmarkForm = document.getElementById('bookmarkForm');
+const bookmarkNote = document.getElementById('bookmarkNote');
+const bookmarkList = document.getElementById('bookmarkList');
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -20,8 +26,104 @@ function getWorkId() {
   return clean(params.get('workId'));
 }
 
+function getGroupId() {
+  const params = new URLSearchParams(window.location.search);
+  return clean(params.get('groupId'));
+}
+
+function parseTeacherDb() {
+  const raw = localStorage.getItem(STORAGE_TEACHER_GROUPS);
+  return raw ? JSON.parse(raw) : {};
+}
+
+function saveTeacherDb(db) {
+  localStorage.setItem(STORAGE_TEACHER_GROUPS, JSON.stringify(db));
+}
+
+function getTeacherGroupById(groupId) {
+  if (!groupId) return null;
+  const db = parseTeacherDb();
+  for (const [teacherId, teacherData] of Object.entries(db)) {
+    for (const group of teacherData?.groups || []) {
+      if (group.id === groupId) return { teacherId, group };
+    }
+  }
+  return null;
+}
+
+function getStudentGroups(studentId) {
+  const db = parseTeacherDb();
+  const groups = [];
+  for (const teacherData of Object.values(db)) {
+    for (const group of teacherData?.groups || []) {
+      if (group.studentIds?.includes(studentId)) groups.push(group);
+    }
+  }
+  return groups;
+}
+
+function formatStamp(seconds) {
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+function renderBookmarkList(bookmarks, { editable = false, color = '#2c59d9', onRemove } = {}) {
+  bookmarkList.innerHTML = '';
+  if (!bookmarks.length) {
+    const li = document.createElement('li');
+    li.className = 'bookmark-list-empty';
+    li.textContent = 'Noch keine Lesezeichen für dieses Werk vorhanden.';
+    bookmarkList.append(li);
+    return;
+  }
+
+  const sorted = [...bookmarks].sort((a, b) => (a.seconds ?? 0) - (b.seconds ?? 0));
+  for (const bookmark of sorted) {
+    const li = document.createElement('li');
+    li.className = 'bookmark-list-item';
+
+    const text = document.createElement('span');
+    text.style.color = bookmark.color || color;
+    const time = Number.isFinite(bookmark.seconds) ? formatStamp(bookmark.seconds) : '--:--';
+    text.textContent = `🔖 ${time} · ${clean(bookmark.note || 'Notiz')}`;
+    li.append(text);
+
+    if (editable) {
+      const jumpBtn = document.createElement('button');
+      jumpBtn.type = 'button';
+      jumpBtn.textContent = 'Anhören';
+      jumpBtn.addEventListener('click', () => {
+        if (Number.isFinite(bookmark.seconds)) {
+          audioPlayer.currentTime = bookmark.seconds;
+          audioPlayer.play();
+        }
+      });
+
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.textContent = 'Entfernen';
+      removeBtn.addEventListener('click', () => onRemove?.(bookmark.id));
+      li.append(jumpBtn, removeBtn);
+    } else {
+      const jumpBtn = document.createElement('button');
+      jumpBtn.type = 'button';
+      jumpBtn.textContent = 'Anhören';
+      jumpBtn.addEventListener('click', () => {
+        if (Number.isFinite(bookmark.seconds)) {
+          audioPlayer.currentTime = bookmark.seconds;
+          audioPlayer.play();
+        }
+      });
+      li.append(jumpBtn);
+    }
+    bookmarkList.append(li);
+  }
+}
+
 async function init() {
   const workId = getWorkId();
+  const groupId = getGroupId();
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -67,6 +169,66 @@ async function init() {
     const audioResponse = await protectedFetch(new URL('../mock/ff-16b-2c-44100hz.mp3', import.meta.url), 'media.audio.read');
     const audioBlob = await audioResponse.blob();
     audioPlayer.src = URL.createObjectURL(audioBlob);
+
+    if (currentUser.role_id === 'role_teacher') {
+      const teacherGroup = getTeacherGroupById(groupId);
+      const group = teacherGroup?.group;
+      if (!group) {
+        relevantNotice.textContent = 'Bitte ein Werk aus der Bibliothek mit aktiver Gruppe öffnen.';
+      } else {
+        bookmarkForm.hidden = false;
+        relevantNotice.textContent = group.relevantWorkIds.includes(workId)
+          ? `Dieses Werk ist für Gruppe "${group.name}" als relevant markiert.`
+          : `Dieses Werk ist für Gruppe "${group.name}" aktuell nicht als relevant markiert.`;
+
+        const renderForTeacher = () => {
+          const bookmarks = group.bookmarks.filter((bookmark) => bookmark.workId === workId);
+          renderBookmarkList(bookmarks, {
+            editable: true,
+            color: group.color,
+            onRemove: (bookmarkId) => {
+              group.bookmarks = group.bookmarks.filter((item) => item.id !== bookmarkId);
+              const db = parseTeacherDb();
+              db[teacherGroup.teacherId].groups = db[teacherGroup.teacherId].groups
+                .map((item) => (item.id === group.id ? group : item));
+              saveTeacherDb(db);
+              renderForTeacher();
+            },
+          });
+        };
+
+        bookmarkForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const note = clean(bookmarkNote.value) || `Hinweis bei ${formatStamp(audioPlayer.currentTime || 0)}`;
+          group.bookmarks.push({
+            id: crypto.randomUUID(),
+            workId,
+            note,
+            seconds: Number(audioPlayer.currentTime || 0),
+            createdAt: new Date().toISOString(),
+          });
+          const db = parseTeacherDb();
+          db[teacherGroup.teacherId].groups = db[teacherGroup.teacherId].groups
+            .map((item) => (item.id === group.id ? group : item));
+          saveTeacherDb(db);
+          bookmarkForm.reset();
+          renderForTeacher();
+        });
+        renderForTeacher();
+      }
+    } else if (currentUser.role_id === 'role_student') {
+      const groups = getStudentGroups(currentUser.id);
+      const isRelevant = groups.some((group) => group.relevantWorkIds?.includes(workId));
+      relevantNotice.textContent = isRelevant
+        ? 'Dieses Werk wurde von deiner Lehrkraft als relevant markiert.'
+        : 'Für dieses Werk liegt keine Relevanzmarkierung deiner Gruppe vor.';
+      const bookmarks = groups.flatMap((group) => (group.bookmarks || [])
+        .filter((bookmark) => bookmark.workId === workId)
+        .map((bookmark) => ({ ...bookmark, color: group.color })));
+      renderBookmarkList(bookmarks, { editable: false, color: groups[0]?.color || '#2c59d9' });
+    } else {
+      bookmarkSection.hidden = true;
+    }
 
     accessNotice.textContent = `Audio geladen für ${currentUser.name}. Dateizugriff wurde über Rollenrechte geprüft.`;
   } catch (error) {
