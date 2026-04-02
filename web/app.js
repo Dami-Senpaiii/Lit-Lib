@@ -123,9 +123,9 @@ function renderList() {
 async function init() {
   try {
     const [works, authors, periods] = await Promise.all([
-      loadJson('../mock/works.json'),
-      loadJson('../mock/authors.json'),
-      loadJson('../mock/literary_periods.json'),
+      loadJson(new URL('../mock/works.json', import.meta.url)),
+      loadJson(new URL('../mock/authors.json', import.meta.url)),
+      loadJson(new URL('../mock/literary_periods.json', import.meta.url)),
     ]);
 
     hydrateLookups(authors, periods);
