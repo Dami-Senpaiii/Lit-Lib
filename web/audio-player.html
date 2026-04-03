@@ -24,6 +24,25 @@
         <audio id="audioPlayer" class="audio-player" controls preload="metadata">
           Dein Browser unterstützt das Audio-Element nicht.
         </audio>
+        <section class="progress-shell" aria-label="Abspielposition und Zeitstempel">
+          <div class="progress-header">
+            <span id="currentTimeLabel">00:00</span>
+            <span id="durationLabel">00:00</span>
+          </div>
+          <div class="progress-line">
+            <input
+              id="progressRange"
+              class="progress-range"
+              type="range"
+              min="0"
+              max="1000"
+              value="0"
+              step="1"
+              aria-label="Abspielposition"
+            />
+            <span id="progressStampMarker" class="progress-stamp-marker" hidden></span>
+          </div>
+        </section>
 
         <section id="bookmarkSection" class="bookmark-section" aria-label="Lesezeichen">
           <div class="bookmark-header">

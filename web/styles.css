@@ -130,6 +130,40 @@ a { color: var(--brand); }
   margin-top: 1rem;
 }
 
+.progress-shell {
+  margin-top: 0.75rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.progress-line {
+  position: relative;
+}
+
+.progress-range {
+  width: 100%;
+  margin: 0;
+}
+
+.progress-stamp-marker {
+  position: absolute;
+  top: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  background: var(--brand);
+  box-shadow: 0 0 0 1px rgba(23, 32, 56, 0.15);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 .player-note {
   margin-top: 0.75rem;
   color: var(--muted);

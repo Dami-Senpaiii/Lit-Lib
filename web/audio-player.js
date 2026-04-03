@@ -4,12 +4,18 @@ const STORAGE_TEACHER_GROUPS = 'litaudio.teacher-groups.v1';
 const playerTitle = document.getElementById('playerTitle');
 const playerMeta = document.getElementById('playerMeta');
 const audioPlayer = document.getElementById('audioPlayer');
+const progressRange = document.getElementById('progressRange');
+const currentTimeLabel = document.getElementById('currentTimeLabel');
+const durationLabel = document.getElementById('durationLabel');
+const progressStampMarker = document.getElementById('progressStampMarker');
 const accessNotice = document.getElementById('accessNotice');
 const bookmarkSection = document.getElementById('bookmarkSection');
 const relevantNotice = document.getElementById('relevantNotice');
 const bookmarkForm = document.getElementById('bookmarkForm');
 const bookmarkNote = document.getElementById('bookmarkNote');
 const bookmarkList = document.getElementById('bookmarkList');
+let selectedStampSeconds = null;
+let activeGroupColor = '#2c59d9';
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -66,6 +72,33 @@ function formatStamp(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+function setSelectedStamp(seconds) {
+  selectedStampSeconds = Number.isFinite(seconds) ? Math.max(0, seconds) : null;
+  updateProgressUi();
+}
+
+function updateProgressUi() {
+  const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
+    ? audioPlayer.duration
+    : 0;
+  const currentTime = Number.isFinite(audioPlayer.currentTime) ? audioPlayer.currentTime : 0;
+
+  const progress = duration > 0
+    ? Math.min(1000, Math.max(0, Math.round((currentTime / duration) * 1000)))
+    : 0;
+  progressRange.value = String(progress);
+  currentTimeLabel.textContent = formatStamp(currentTime);
+  durationLabel.textContent = formatStamp(duration);
+
+  const hasStamp = Number.isFinite(selectedStampSeconds) && duration > 0;
+  progressStampMarker.hidden = !hasStamp;
+  if (hasStamp) {
+    const ratio = Math.min(1, Math.max(0, selectedStampSeconds / duration));
+    progressStampMarker.style.left = `${ratio * 100}%`;
+    progressStampMarker.style.backgroundColor = activeGroupColor;
+  }
 }
 
 function renderBookmarkList(bookmarks, { editable = false, color = '#2c59d9', onRemove } = {}) {
@@ -169,6 +202,17 @@ async function init() {
     const audioResponse = await protectedFetch(new URL('../mock/ff-16b-2c-44100hz.mp3', import.meta.url), 'media.audio.read');
     const audioBlob = await audioResponse.blob();
     audioPlayer.src = URL.createObjectURL(audioBlob);
+    progressRange.addEventListener('input', () => {
+      const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
+        ? audioPlayer.duration
+        : 0;
+      if (duration > 0) {
+        audioPlayer.currentTime = (Number(progressRange.value) / 1000) * duration;
+      }
+      updateProgressUi();
+    });
+    audioPlayer.addEventListener('timeupdate', updateProgressUi);
+    audioPlayer.addEventListener('loadedmetadata', updateProgressUi);
 
     if (currentUser.role_id === 'role_teacher') {
       const teacherGroup = getTeacherGroupById(groupId);
@@ -176,6 +220,7 @@ async function init() {
       if (!group) {
         relevantNotice.textContent = 'Bitte ein Werk aus der Bibliothek mit aktiver Gruppe öffnen.';
       } else {
+        activeGroupColor = clean(group.color) || '#2c59d9';
         bookmarkForm.hidden = false;
         relevantNotice.textContent = group.relevantWorkIds.includes(workId)
           ? `Dieses Werk ist für Gruppe "${group.name}" als relevant markiert.`
@@ -207,6 +252,7 @@ async function init() {
             seconds: Number(audioPlayer.currentTime || 0),
             createdAt: new Date().toISOString(),
           });
+          setSelectedStamp(Number(audioPlayer.currentTime || 0));
           const db = parseTeacherDb();
           db[teacherGroup.teacherId].groups = db[teacherGroup.teacherId].groups
             .map((item) => (item.id === group.id ? group : item));
@@ -218,6 +264,7 @@ async function init() {
       }
     } else if (currentUser.role_id === 'role_student') {
       const groups = getStudentGroups(currentUser.id);
+      activeGroupColor = clean(groups[0]?.color) || '#2c59d9';
       const isRelevant = groups.some((group) => group.relevantWorkIds?.includes(workId));
       relevantNotice.textContent = isRelevant
         ? 'Dieses Werk wurde von deiner Lehrkraft als relevant markiert.'
@@ -231,6 +278,7 @@ async function init() {
     }
 
     accessNotice.textContent = `Audio geladen für ${currentUser.name}. Dateizugriff wurde über Rollenrechte geprüft.`;
+    updateProgressUi();
   } catch (error) {
     console.error(error);
     playerTitle.textContent = 'Werk konnte nicht geladen werden';
