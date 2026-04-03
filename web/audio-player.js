@@ -4,12 +4,19 @@ const STORAGE_TEACHER_GROUPS = 'litaudio.teacher-groups.v1';
 const playerTitle = document.getElementById('playerTitle');
 const playerMeta = document.getElementById('playerMeta');
 const audioPlayer = document.getElementById('audioPlayer');
+const playToggle = document.getElementById('playToggle');
+const progressRange = document.getElementById('progressRange');
+const currentTimeLabel = document.getElementById('currentTimeLabel');
+const durationLabel = document.getElementById('durationLabel');
+const progressStampLayer = document.getElementById('progressStampLayer');
 const accessNotice = document.getElementById('accessNotice');
 const bookmarkSection = document.getElementById('bookmarkSection');
 const relevantNotice = document.getElementById('relevantNotice');
 const bookmarkForm = document.getElementById('bookmarkForm');
 const bookmarkNote = document.getElementById('bookmarkNote');
 const bookmarkList = document.getElementById('bookmarkList');
+let progressStamps = [];
+let activeGroupColor = '#2c59d9';
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -66,6 +73,46 @@ function formatStamp(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+function setProgressStamps(stamps) {
+  progressStamps = (Array.isArray(stamps) ? stamps : [])
+    .filter((stamp) => Number.isFinite(stamp?.seconds))
+    .map((stamp) => ({
+      seconds: Math.max(0, Number(stamp.seconds)),
+      color: clean(stamp.color) || activeGroupColor,
+    }));
+  renderProgressStampMarkers();
+}
+
+function renderProgressStampMarkers() {
+  progressStampLayer.innerHTML = '';
+  const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
+    ? audioPlayer.duration
+    : 0;
+  if (duration <= 0 || !progressStamps.length) return;
+  for (const stamp of progressStamps) {
+    const ratio = Math.min(1, Math.max(0, stamp.seconds / duration));
+    const marker = document.createElement('span');
+    marker.className = 'progress-stamp-marker';
+    marker.style.left = `${ratio * 100}%`;
+    marker.style.backgroundColor = stamp.color || activeGroupColor;
+    progressStampLayer.append(marker);
+  }
+}
+
+function updateProgressUi() {
+  const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
+    ? audioPlayer.duration
+    : 0;
+  const currentTime = Number.isFinite(audioPlayer.currentTime) ? audioPlayer.currentTime : 0;
+
+  const progress = duration > 0
+    ? Math.min(1000, Math.max(0, Math.round((currentTime / duration) * 1000)))
+    : 0;
+  progressRange.value = String(progress);
+  currentTimeLabel.textContent = formatStamp(currentTime);
+  durationLabel.textContent = formatStamp(duration);
 }
 
 function renderBookmarkList(bookmarks, { editable = false, color = '#2c59d9', onRemove } = {}) {
@@ -169,6 +216,36 @@ async function init() {
     const audioResponse = await protectedFetch(new URL('../mock/ff-16b-2c-44100hz.mp3', import.meta.url), 'media.audio.read');
     const audioBlob = await audioResponse.blob();
     audioPlayer.src = URL.createObjectURL(audioBlob);
+    playToggle.addEventListener('click', async () => {
+      if (audioPlayer.paused) {
+        await audioPlayer.play();
+      } else {
+        audioPlayer.pause();
+      }
+    });
+    progressRange.addEventListener('input', () => {
+      const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
+        ? audioPlayer.duration
+        : 0;
+      if (duration > 0) {
+        audioPlayer.currentTime = (Number(progressRange.value) / 1000) * duration;
+      }
+      updateProgressUi();
+    });
+    audioPlayer.addEventListener('timeupdate', updateProgressUi);
+    audioPlayer.addEventListener('loadedmetadata', () => {
+      updateProgressUi();
+      renderProgressStampMarkers();
+    });
+    audioPlayer.addEventListener('play', () => {
+      playToggle.textContent = '⏸️ Pause';
+    });
+    audioPlayer.addEventListener('pause', () => {
+      playToggle.textContent = '▶️ Abspielen';
+    });
+    audioPlayer.addEventListener('ended', () => {
+      playToggle.textContent = '▶️ Abspielen';
+    });
 
     if (currentUser.role_id === 'role_teacher') {
       const teacherGroup = getTeacherGroupById(groupId);
@@ -176,6 +253,7 @@ async function init() {
       if (!group) {
         relevantNotice.textContent = 'Bitte ein Werk aus der Bibliothek mit aktiver Gruppe öffnen.';
       } else {
+        activeGroupColor = clean(group.color) || '#2c59d9';
         bookmarkForm.hidden = false;
         relevantNotice.textContent = group.relevantWorkIds.includes(workId)
           ? `Dieses Werk ist für Gruppe "${group.name}" als relevant markiert.`
@@ -183,6 +261,10 @@ async function init() {
 
         const renderForTeacher = () => {
           const bookmarks = group.bookmarks.filter((bookmark) => bookmark.workId === workId);
+          setProgressStamps(bookmarks.map((bookmark) => ({
+            seconds: bookmark.seconds,
+            color: group.color,
+          })));
           renderBookmarkList(bookmarks, {
             editable: true,
             color: group.color,
@@ -218,6 +300,7 @@ async function init() {
       }
     } else if (currentUser.role_id === 'role_student') {
       const groups = getStudentGroups(currentUser.id);
+      activeGroupColor = clean(groups[0]?.color) || '#2c59d9';
       const isRelevant = groups.some((group) => group.relevantWorkIds?.includes(workId));
       relevantNotice.textContent = isRelevant
         ? 'Dieses Werk wurde von deiner Lehrkraft als relevant markiert.'
@@ -225,12 +308,18 @@ async function init() {
       const bookmarks = groups.flatMap((group) => (group.bookmarks || [])
         .filter((bookmark) => bookmark.workId === workId)
         .map((bookmark) => ({ ...bookmark, color: group.color })));
+      setProgressStamps(bookmarks.map((bookmark) => ({
+        seconds: bookmark.seconds,
+        color: bookmark.color,
+      })));
       renderBookmarkList(bookmarks, { editable: false, color: groups[0]?.color || '#2c59d9' });
     } else {
       bookmarkSection.hidden = true;
+      setProgressStamps([]);
     }
 
     accessNotice.textContent = `Audio geladen für ${currentUser.name}. Dateizugriff wurde über Rollenrechte geprüft.`;
+    updateProgressUi();
   } catch (error) {
     console.error(error);
     playerTitle.textContent = 'Werk konnte nicht geladen werden';
