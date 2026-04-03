@@ -289,6 +289,7 @@ async function init() {
             seconds: Number(audioPlayer.currentTime || 0),
             createdAt: new Date().toISOString(),
           });
+          setSelectedStamp(Number(audioPlayer.currentTime || 0));
           const db = parseTeacherDb();
           db[teacherGroup.teacherId].groups = db[teacherGroup.teacherId].groups
             .map((item) => (item.id === group.id ? group : item));
