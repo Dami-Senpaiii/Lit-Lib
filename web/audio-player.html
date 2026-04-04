@@ -21,7 +21,7 @@
         <h2 id="playerTitle">Werk wird geladen…</h2>
         <p id="playerMeta" class="meta"></p>
 
-        <audio id="audioPlayer" class="audio-player" preload="metadata" controls controlsList="nodownload noplaybackrate">
+        <audio id="audioPlayer" class="audio-player" preload="metadata">
           Dein Browser unterstützt das Audio-Element nicht.
         </audio>
         <section class="progress-shell" aria-label="Abspielposition und Zeitstempel">
@@ -31,8 +31,11 @@
               <button id="jumpBack" type="button" aria-label="10 Sekunden zurück">↺ 10s</button>
               <button id="jumpForward" type="button" aria-label="10 Sekunden vor">10s ↻</button>
             </div>
-            <span id="currentTimeLabel">00:00</span>
-            <span id="durationLabel">00:00</span>
+            <div class="progress-time">
+              <span id="currentTimeLabel">00:00</span>
+              <span aria-hidden="true">/</span>
+              <span id="durationLabel">00:00</span>
+            </div>
           </div>
           <div class="progress-line">
             <input
