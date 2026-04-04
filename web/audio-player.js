@@ -6,6 +6,7 @@ const playerMeta = document.getElementById('playerMeta');
 const audioPlayer = document.getElementById('audioPlayer');
 const playToggle = document.getElementById('playToggle');
 const progressRange = document.getElementById('progressRange');
+const volumeRange = document.getElementById('volumeRange');
 const currentTimeLabel = document.getElementById('currentTimeLabel');
 const durationLabel = document.getElementById('durationLabel');
 const progressStampLayer = document.getElementById('progressStampLayer');
@@ -121,9 +122,9 @@ function updateProgressUi() {
   const progress = duration > 0
     ? Math.min(1000, Math.max(0, Math.round((currentTime / duration) * 1000)))
     : 0;
-  progressRange.value = String(progress);
   currentTimeLabel.textContent = formatStamp(currentTime);
   durationLabel.textContent = formatStamp(duration);
+  progressRange.value = String(progress);
 }
 
 function renderBookmarkList(bookmarks, { editable = false, color = '#2c59d9', onRemove } = {}) {
@@ -243,6 +244,9 @@ async function init() {
       }
       updateProgressUi();
     });
+    volumeRange.addEventListener('input', () => {
+      audioPlayer.volume = Number(volumeRange.value);
+    });
     audioPlayer.addEventListener('timeupdate', updateProgressUi);
     audioPlayer.addEventListener('loadedmetadata', () => {
       updateProgressUi();
@@ -250,12 +254,15 @@ async function init() {
     });
     audioPlayer.addEventListener('play', () => {
       playToggle.textContent = '⏸️ Pause';
+      playToggle.setAttribute('aria-label', 'Wiedergabe pausieren');
     });
     audioPlayer.addEventListener('pause', () => {
       playToggle.textContent = '▶️ Abspielen';
+      playToggle.setAttribute('aria-label', 'Wiedergabe starten');
     });
     audioPlayer.addEventListener('ended', () => {
       playToggle.textContent = '▶️ Abspielen';
+      playToggle.setAttribute('aria-label', 'Wiedergabe starten');
     });
     jumpBackButton?.addEventListener('click', () => {
       audioPlayer.currentTime = Math.max(0, Number(audioPlayer.currentTime || 0) - 10);

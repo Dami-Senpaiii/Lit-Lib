@@ -126,10 +126,13 @@ a { color: var(--brand); }
 }
 
 .audio-player {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 0.65rem;
-  background: #fff;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .progress-stamp-layer {
@@ -139,37 +142,52 @@ a { color: var(--brand); }
 }
 
 .progress-shell {
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: #f8f9fc;
 }
 
 .progress-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 0.8rem;
   color: var(--muted);
   font-size: 0.85rem;
-  margin-bottom: 0.4rem;
-}
-
-.progress-header #currentTimeLabel {
-  min-width: 2.8rem;
-  text-align: right;
-}
-
-.progress-header #durationLabel {
-  min-width: 2.8rem;
+  margin-top: 0.55rem;
 }
 
 .player-button-row {
-  margin-right: auto;
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.45rem;
+}
+
+.volume-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.volume-control input {
+  width: 120px;
+  padding: 0;
+}
+
+.progress-time {
+  display: inline-flex;
+  gap: 0.3rem;
+  min-width: 6.5rem;
+  justify-content: flex-end;
 }
 
 .progress-line {
   position: relative;
+  flex: 1;
 }
 
 .progress-range {
