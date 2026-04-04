@@ -4,7 +4,6 @@ const STORAGE_TEACHER_GROUPS = 'litaudio.teacher-groups.v1';
 const playerTitle = document.getElementById('playerTitle');
 const playerMeta = document.getElementById('playerMeta');
 const audioPlayer = document.getElementById('audioPlayer');
-const playToggle = document.getElementById('playToggle');
 const progressRange = document.getElementById('progressRange');
 const currentTimeLabel = document.getElementById('currentTimeLabel');
 const durationLabel = document.getElementById('durationLabel');
@@ -94,6 +93,7 @@ function setSelectedStamp(seconds) {
 }
 
 function renderProgressStampMarkers() {
+  if (!progressStampLayer) return;
   progressStampLayer.innerHTML = '';
   const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
     ? audioPlayer.duration
@@ -121,9 +121,9 @@ function updateProgressUi() {
   const progress = duration > 0
     ? Math.min(1000, Math.max(0, Math.round((currentTime / duration) * 1000)))
     : 0;
-  progressRange.value = String(progress);
-  currentTimeLabel.textContent = formatStamp(currentTime);
-  durationLabel.textContent = formatStamp(duration);
+  if (currentTimeLabel) currentTimeLabel.textContent = formatStamp(currentTime);
+  if (durationLabel) durationLabel.textContent = formatStamp(duration);
+  if (progressRange) progressRange.value = String(progress);
 }
 
 function renderBookmarkList(bookmarks, { editable = false, color = '#2c59d9', onRemove } = {}) {
@@ -227,35 +227,21 @@ async function init() {
     const audioResponse = await protectedFetch(new URL('../mock/ff-16b-2c-44100hz.mp3', import.meta.url), 'media.audio.read');
     const audioBlob = await audioResponse.blob();
     audioPlayer.src = URL.createObjectURL(audioBlob);
-    playToggle.addEventListener('click', async () => {
-      if (audioPlayer.paused) {
-        await audioPlayer.play();
-      } else {
-        audioPlayer.pause();
-      }
-    });
-    progressRange.addEventListener('input', () => {
-      const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
-        ? audioPlayer.duration
-        : 0;
-      if (duration > 0) {
-        audioPlayer.currentTime = (Number(progressRange.value) / 1000) * duration;
-      }
-      updateProgressUi();
-    });
+    if (progressRange) {
+      progressRange.addEventListener('input', () => {
+        const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
+          ? audioPlayer.duration
+          : 0;
+        if (duration > 0) {
+          audioPlayer.currentTime = (Number(progressRange.value) / 1000) * duration;
+        }
+        updateProgressUi();
+      });
+    }
     audioPlayer.addEventListener('timeupdate', updateProgressUi);
     audioPlayer.addEventListener('loadedmetadata', () => {
       updateProgressUi();
       renderProgressStampMarkers();
-    });
-    audioPlayer.addEventListener('play', () => {
-      playToggle.textContent = '⏸️ Pause';
-    });
-    audioPlayer.addEventListener('pause', () => {
-      playToggle.textContent = '▶️ Abspielen';
-    });
-    audioPlayer.addEventListener('ended', () => {
-      playToggle.textContent = '▶️ Abspielen';
     });
     jumpBackButton?.addEventListener('click', () => {
       audioPlayer.currentTime = Math.max(0, Number(audioPlayer.currentTime || 0) - 10);
