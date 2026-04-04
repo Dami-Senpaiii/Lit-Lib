@@ -24,28 +24,17 @@
         <audio id="audioPlayer" class="audio-player" preload="metadata" controls controlsList="nodownload noplaybackrate">
           Dein Browser unterstützt das Audio-Element nicht.
         </audio>
-        <section class="progress-shell" aria-label="Abspielposition und Zeitstempel">
+        <section class="progress-shell" aria-label="Zusätzliche Audio-Steuerung">
           <div class="progress-header">
             <div class="player-button-row">
-              <button id="playToggle" type="button">▶️ Abspielen</button>
               <button id="jumpBack" type="button" aria-label="10 Sekunden zurück">↺ 10s</button>
               <button id="jumpForward" type="button" aria-label="10 Sekunden vor">10s ↻</button>
             </div>
-            <span id="currentTimeLabel">00:00</span>
-            <span id="durationLabel">00:00</span>
-          </div>
-          <div class="progress-line">
-            <input
-              id="progressRange"
-              class="progress-range"
-              type="range"
-              min="0"
-              max="1000"
-              value="0"
-              step="1"
-              aria-label="Abspielposition"
-            />
-            <div id="progressStampLayer" class="progress-stamp-layer" aria-hidden="true"></div>
+            <div class="progress-time" aria-live="polite">
+              <span id="currentTimeLabel">00:00</span>
+              <span aria-hidden="true">/</span>
+              <span id="durationLabel">00:00</span>
+            </div>
           </div>
         </section>
 
