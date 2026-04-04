@@ -126,10 +126,7 @@ a { color: var(--brand); }
 }
 
 .audio-player {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 0.65rem;
-  background: #fff;
+  display: none;
 }
 
 .progress-stamp-layer {
