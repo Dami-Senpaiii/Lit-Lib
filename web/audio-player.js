@@ -15,8 +15,11 @@ const relevantNotice = document.getElementById('relevantNotice');
 const bookmarkForm = document.getElementById('bookmarkForm');
 const bookmarkNote = document.getElementById('bookmarkNote');
 const bookmarkList = document.getElementById('bookmarkList');
+const jumpBackButton = document.getElementById('jumpBack');
+const jumpForwardButton = document.getElementById('jumpForward');
 let progressStamps = [];
 let activeGroupColor = '#2c59d9';
+let selectedStampSeconds = null;
 
 const clean = (value) => String(value ?? '').trim();
 
@@ -85,6 +88,11 @@ function setProgressStamps(stamps) {
   renderProgressStampMarkers();
 }
 
+function setSelectedStamp(seconds) {
+  selectedStampSeconds = Number.isFinite(seconds) ? Math.max(0, Number(seconds)) : null;
+  renderProgressStampMarkers();
+}
+
 function renderProgressStampMarkers() {
   progressStampLayer.innerHTML = '';
   const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
@@ -97,6 +105,9 @@ function renderProgressStampMarkers() {
     marker.className = 'progress-stamp-marker';
     marker.style.left = `${ratio * 100}%`;
     marker.style.backgroundColor = stamp.color || activeGroupColor;
+    const isSelected = Number.isFinite(selectedStampSeconds) && Math.abs(stamp.seconds - selectedStampSeconds) < 0.5;
+    if (isSelected) marker.classList.add('is-selected');
+    marker.title = `Lesezeichen bei ${formatStamp(stamp.seconds)}`;
     progressStampLayer.append(marker);
   }
 }
@@ -246,6 +257,16 @@ async function init() {
     audioPlayer.addEventListener('ended', () => {
       playToggle.textContent = '▶️ Abspielen';
     });
+    jumpBackButton?.addEventListener('click', () => {
+      audioPlayer.currentTime = Math.max(0, Number(audioPlayer.currentTime || 0) - 10);
+      updateProgressUi();
+    });
+    jumpForwardButton?.addEventListener('click', () => {
+      const duration = Number.isFinite(audioPlayer.duration) ? audioPlayer.duration : 0;
+      const target = Number(audioPlayer.currentTime || 0) + 10;
+      audioPlayer.currentTime = duration > 0 ? Math.min(duration, target) : target;
+      updateProgressUi();
+    });
 
     if (currentUser.role_id === 'role_teacher') {
       const teacherGroup = getTeacherGroupById(groupId);
@@ -281,15 +302,16 @@ async function init() {
 
         bookmarkForm.addEventListener('submit', (event) => {
           event.preventDefault();
-          const note = clean(bookmarkNote.value) || `Hinweis bei ${formatStamp(audioPlayer.currentTime || 0)}`;
+          const seconds = Number(audioPlayer.currentTime || 0);
+          const note = clean(bookmarkNote.value) || `Hinweis bei ${formatStamp(seconds)}`;
           group.bookmarks.push({
             id: crypto.randomUUID(),
             workId,
             note,
-            seconds: Number(audioPlayer.currentTime || 0),
+            seconds,
             createdAt: new Date().toISOString(),
           });
-          setSelectedStamp(Number(audioPlayer.currentTime || 0));
+          setSelectedStamp(seconds);
           const db = parseTeacherDb();
           db[teacherGroup.teacherId].groups = db[teacherGroup.teacherId].groups
             .map((item) => (item.id === group.id ? group : item));
