@@ -4,7 +4,6 @@ const STORAGE_TEACHER_GROUPS = 'litaudio.teacher-groups.v1';
 const playerTitle = document.getElementById('playerTitle');
 const playerMeta = document.getElementById('playerMeta');
 const audioPlayer = document.getElementById('audioPlayer');
-const playToggle = document.getElementById('playToggle');
 const progressRange = document.getElementById('progressRange');
 const volumeRange = document.getElementById('volumeRange');
 const currentTimeLabel = document.getElementById('currentTimeLabel');
@@ -105,6 +104,7 @@ function setSelectedStamp(seconds) {
 }
 
 function renderProgressStampMarkers() {
+  if (!progressStampLayer) return;
   progressStampLayer.innerHTML = '';
   const duration = Number.isFinite(audioPlayer.duration) && audioPlayer.duration > 0
     ? audioPlayer.duration
