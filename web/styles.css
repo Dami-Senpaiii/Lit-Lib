@@ -185,13 +185,6 @@ a { color: var(--brand); }
   justify-content: flex-end;
 }
 
-.progress-time {
-  display: inline-flex;
-  gap: 0.3rem;
-  min-width: 6.5rem;
-  justify-content: flex-end;
-}
-
 .progress-line {
   position: relative;
   flex: 1;

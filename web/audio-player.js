@@ -72,6 +72,16 @@ function getStudentGroups(studentId) {
   return groups;
 }
 
+function ensureGroupCollections(group) {
+  if (!Array.isArray(group.relevantWorkIds)) group.relevantWorkIds = [];
+  if (!Array.isArray(group.bookmarks)) group.bookmarks = [];
+}
+
+function createBookmarkId() {
+  if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
+  return `bookmark-${Date.now()}-${Math.round(Math.random() * 1_000_000)}`;
+}
+
 function formatStamp(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
@@ -281,6 +291,7 @@ async function init() {
       if (!group) {
         relevantNotice.textContent = 'Bitte ein Werk aus der Bibliothek mit aktiver Gruppe öffnen.';
       } else {
+        ensureGroupCollections(group);
         activeGroupColor = clean(group.color) || '#2c59d9';
         bookmarkForm.hidden = false;
         relevantNotice.textContent = group.relevantWorkIds.includes(workId)
@@ -312,7 +323,7 @@ async function init() {
           const seconds = Number(audioPlayer.currentTime || 0);
           const note = clean(bookmarkNote.value) || `Hinweis bei ${formatStamp(seconds)}`;
           group.bookmarks.push({
-            id: crypto.randomUUID(),
+            id: createBookmarkId(),
             workId,
             note,
             seconds,
@@ -329,7 +340,10 @@ async function init() {
         renderForTeacher();
       }
     } else if (currentUser.role_id === 'role_student') {
-      const groups = getStudentGroups(currentUser.id);
+      const groups = getStudentGroups(currentUser.id).map((group) => {
+        ensureGroupCollections(group);
+        return group;
+      });
       activeGroupColor = clean(groups[0]?.color) || '#2c59d9';
       const isRelevant = groups.some((group) => group.relevantWorkIds?.includes(workId));
       relevantNotice.textContent = isRelevant
