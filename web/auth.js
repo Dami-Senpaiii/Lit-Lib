@@ -20,11 +20,26 @@ function saveDbToStorage(db) {
   localStorage.setItem(STORAGE_DB_KEY, JSON.stringify(db));
 }
 
+function migrateDb(db) {
+  if (!db?.work_access_policies) return db;
+
+  const studentPolicy = db.work_access_policies
+    .find((item) => item.role_id === 'role_student');
+
+  if (studentPolicy?.scope !== 'all') {
+    studentPolicy.scope = 'all';
+    saveDbToStorage(db);
+  }
+
+  return db;
+}
+
 export async function initSecurityDb() {
   let db = readDbFromStorage();
-  if (db) return db;
+  if (db) return migrateDb(db);
 
   db = await loadSeed();
+  db = migrateDb(db);
   saveDbToStorage(db);
   return db;
 }
