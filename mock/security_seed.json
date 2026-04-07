@@ -23,7 +23,7 @@
     }
   ],
   "work_access_policies": [
-    { "role_id": "role_student", "scope": "featured_only" },
+    { "role_id": "role_student", "scope": "all" },
     { "role_id": "role_teacher", "scope": "all" },
     { "role_id": "role_admin", "scope": "all" }
   ],
